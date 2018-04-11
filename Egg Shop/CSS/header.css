@@ -1,0 +1,61 @@
+body{
+    background-image: url("../Resources/Images/home-head.jpg")
+}
+.header-disapearing-bar{
+    text-align: center;
+    margin-top: 30px;
+    margin-right: 20%;
+    margin-bottom: 20px;
+    margin-left: 20%;
+}
+.home-button{
+    position: relative;
+    width: 30%;
+    margin: 0px;
+    text-align: left;
+}
+.navigation-button-container{
+    position: relative;
+    text-align: right;
+}
+a.navigation-button{
+    font-family: 'Nunito', sans-serif;
+    text-decoration-line: none;
+    color: white;
+    font-size: 20px;
+}
+#home{
+    text-decoration-line: underline;
+}
+a.navigation-button:hover{
+    text-decoration-line: underline;
+}
+
+.header-content-container{
+    text-align: center;
+    margin-top: 180px;
+    margin-right: 20%;
+    margin-bottom: 20px;
+    margin-left: 20%;
+}
+.header-slogan{
+    font-family: 'Noto Sans', sans-serif;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    font-style: inherit;
+    font-weight: bold;
+}
+.header-signature{
+    font-family: 'Pacifico', cursive;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    font-size: 78px;
+    color: white;
+    text-align: center;
+    font-weight: 500;
+
+    margin: 10px;
+}
