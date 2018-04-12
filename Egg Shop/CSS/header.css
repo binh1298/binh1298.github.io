@@ -6,15 +6,16 @@ body, html{
 .bgimg-1{
     background-attachment: fixed;
     background-size: cover;
-}
-.bgimg-1 {
     background-image: url("../Resources/Images/home-head.jpg");
     min-height: 100%;
 }
-
 .bg-overlay-dark{
     background-color: rgba(0, 0, 0, 0.4);
-    height: 100%;
+    min-height: 100%;
+}
+.bg-overlay-foggy{
+    background-color: rgba(255, 255, 255, 0.05);
+    min-height: 100%;
 }
 .header-disapearing-bar-grid{
     padding-top: 28px;
@@ -73,5 +74,20 @@ a.navigation-button:hover{
     text-align: center;
     font-weight: 500;
     margin: 10px;
-    padding-bottom: 500px;
 }
+#request-demo{
+    padding: 12px 24px;
+    border: none;
+    border-radius: 3px;
+    background-color: white;
+    font-family: 'Noto Sans', sans-serif;
+    text-decoration-color: #252525;
+    font-weight: bolder;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 410px;
+    transition: 0.2s;
+ }
+ #request-demo:hover{
+    background-color: rgb(255, 159, 13)    
+ }
