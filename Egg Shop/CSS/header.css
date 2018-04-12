@@ -1,28 +1,44 @@
-body{
-    background-image: url("../Resources/Images/home-head.jpg")
+body, html{
+    height: 100%;
+    margin: 0;
+    overflow: auto;
 }
-.header-disapearing-bar{
-    text-align: center;
-    margin-top: 30px;
-    margin-right: 20%;
-    margin-bottom: 20px;
-    margin-left: 20%;
+.bgimg-1{
+    background-attachment: fixed;
+    background-size: cover;
+}
+.bgimg-1 {
+    background-image: url("../Resources/Images/home-head.jpg");
+    min-height: 100%;
+}
+
+.bg-overlay-dark{
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100%;
+}
+.header-disapearing-bar-grid{
+    padding-top: 28px;
+    padding-right: 21%;
+    padding-bottom: 18px;
+    padding-left: 21%;
+    display: grid;
+    grid-template-columns: 60% 40%;
 }
 .home-button{
-    position: relative;
-    width: 30%;
-    margin: 0px;
     text-align: left;
 }
-.navigation-button-container{
-    position: relative;
-    text-align: right;
+.navigation-button-container-grid{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
 }
 a.navigation-button{
     font-family: 'Nunito', sans-serif;
     text-decoration-line: none;
     color: white;
-    font-size: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    margin: 10px;
 }
 #home{
     text-decoration-line: underline;
@@ -56,6 +72,6 @@ a.navigation-button:hover{
     color: white;
     text-align: center;
     font-weight: 500;
-
     margin: 10px;
+    padding-bottom: 500px;
 }
