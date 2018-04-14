@@ -1,0 +1,142 @@
+body, html{
+    height: 100%;
+    margin: 0;
+    overflow: auto;
+}
+.bgimg-1{
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../Resources/Images/home-head.jpg");
+    min-height: 100%;
+}
+.bg-overlay-dark{
+    background-color: rgba(0, 0, 0, 0.6);
+    min-height: 100%;
+}
+.bg-overlay-foggy{
+    background-color: rgba(255, 255, 255, 0.08);
+    min-height: 100%;
+}
+.header-disapearing-bar-grid{
+    padding-top: 10px;
+    padding-right: 20%;
+    padding-bottom: 5px;
+    padding-left: 20%;
+    display: grid;
+    grid-template-columns: 61.5% 38.5%;
+}
+.home-button{
+    text-align: left;
+    margin: 10px;
+}
+.navigation-button-container-grid{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}
+a.navigation-button{
+    position:relative;
+    display: block;
+    font-family: 'Nunito', sans-serif;
+    text-decoration-line: none;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 30px;
+}
+/* Hover Animation */
+a.navigation-button::after{
+    content: "";
+    transition:0.3s all ease;
+    position: absolute;
+    bottom: 18px;
+    height: 2px;
+    width: 0%;
+    opacity: 0;
+    background:white; 
+}
+
+#home::after{
+    left: 25px;
+    width: 38px;
+    opacity: 1;
+}
+
+a.navigation-button#story::after{
+    left: 22px;
+}
+#story:hover::after{
+    width: 42px;
+    opacity: 1;
+}
+
+a.navigation-button#gallery::after{
+    left: 14px;
+}
+#gallery:hover::after{
+    width: 58px;
+    opacity: 1;
+}
+
+a.navigation-button#menu::after{
+    left: 25px;
+}
+#menu:hover::after{
+    width: 38px;
+    opacity: 1;
+}
+
+a.navigation-button#contact::after{
+    left: 14px;
+}
+#contact:hover::after{
+    width: 60px;
+    opacity: 1;;
+}
+
+/* ---------- */
+
+.header-content-container{
+    text-align: center;
+    margin-top: 180px;
+    margin-right: 20%;
+    margin-bottom: 20px;
+    margin-left: 20%;
+}
+.header-slogan{
+    font-family: 'Noto Sans', sans-serif;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    font-style: inherit;
+    font-weight: bold;
+}
+.header-signature{
+    font-family: 'Pacifico', cursive;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    font-size: 78px;
+    color: white;
+    text-align: center;
+    font-weight: 500;
+    margin: 10px;
+}
+#request-demo{
+    padding: 12px 24px;
+    border: none;
+    border-radius: 3px;
+    background-color: white;
+    font-family: 'Noto Sans', sans-serif;
+    text-decoration-color: #252525;
+    font-weight: bolder;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 410px;
+    transition: 0.2s;
+ }
+ #request-demo:hover{
+    background-color: rgb(255, 159, 13)    
+ }
