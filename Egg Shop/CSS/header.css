@@ -9,7 +9,6 @@ body, html{
     background-repeat: no-repeat;
     background-image: url("../Resources/Images/home-head.jpg");
     min-height: 100%;
-    background-position-y: -150px;
 }
 .bg-overlay-dark{
     background-color: rgba(0, 0, 0, 0.6);
