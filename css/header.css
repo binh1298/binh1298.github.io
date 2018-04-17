@@ -7,7 +7,7 @@ body, html{
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("../Resources/Images/home-head.jpg");
+    background-image: url("../resources/images/home-head.jpg");
     min-height: 100%;
 }
 .bg-overlay-dark{
@@ -99,10 +99,6 @@ a.navigation-button#contact::after{
 
 .header-content-container{
     text-align: center;
-    margin-top: 180px;
-    margin-right: 20%;
-    margin-bottom: 20px;
-    margin-left: 20%;
 }
 .header-slogan{
     font-family: 'Noto Sans', sans-serif;
