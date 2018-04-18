@@ -1,47 +1,59 @@
-body, html{
+body,html {
     height: 100%;
     margin: 0;
     overflow: auto;
 }
-.bgimg-1{
+
+@media screen and (max-width: 1200px) {
+    div.disappear-in-small-screen{
+        display: none;
+    }
+}
+
+.bgimg-1 {
     background-repeat: no-repeat;
     background-size: cover;
+    background-position-y: -150px;
     background-image: url("https://binh1298.github.io/resources/images/home-head.jpg");
     min-height: 100%;
 }
-.dark-filter{
+
+.dark-filter {
     background-color: rgba(0, 0, 0, 0.6);
 }
-.foggy-filter{
+
+.foggy-filter {
     background-color: rgba(255, 255, 255, 0.08);
 }
-.bg-overlay{
+
+.bg-overlay {
     position: absolute;
     size: 100%;
     min-height: 100%;
     min-width: 100%;
 }
 
-
-.header-disapearing-bar-grid{
+.header-disapearing-bar-grid {
     padding-top: 10px;
     padding-bottom: 5px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 65% 35%;
     min-width: 1150px;
-    max-width: 70vw;
+    max-width: 60vw;
 }
-.home-button{
+.home-button {
     text-align: left;
     margin: 10px;
 }
-.navigation-button-container-grid{
+
+.navigation-button-container-grid {
     display: grid;
     grid-template-columns: 20% 20% 24% 16% 20%;
 }
-a.navigation-button{
-    position:relative;
+
+a.navigation-button {
+    position: relative;
     display: block;
     font-family: 'Nunito', sans-serif;
     text-decoration-line: none;
@@ -50,53 +62,58 @@ a.navigation-button{
     font-weight: 600;
     margin-top: 30px;
 }
+
 /* Hover Animation */
-a.navigation-button::after{
+
+a.navigation-button::after {
     content: "";
-    transition:0.3s all ease;
+    transition: 0.3s all ease;
     position: absolute;
     bottom: 18px;
     height: 2px;
     left: 0;
     width: 0;
     opacity: 0;
-    background:white; 
+    background: white;
 }
 
-#home::after{
+#home::after {
     width: 3em;
     opacity: 1;
 }
 
-#story:hover::after{
+#story:hover::after {
     width: 3.2em;
     opacity: 1;
 }
 
-#gallery:hover::after{
+#gallery:hover::after {
     width: 4.4em;
     opacity: 1;
 }
 
-#menu:hover::after{
+#menu:hover::after {
     width: 2.8em;
     opacity: 1;
 }
 
-#contact:hover::after{
+#contact:hover::after {
     width: 4.6em;
-    opacity: 1;;
+    opacity: 1;
+    ;
 }
 
 /* ---------- */
 
-.header-content-container{
+.header-content-container {
     text-align: center;
 }
-.header-divider{
-    height: 20vh;
+
+.header-divider {
+    height: 16vh;
 }
-.header-slogan{
+
+.header-slogan {
     font-family: 'Noto Sans', sans-serif;
     letter-spacing: 6px;
     text-transform: uppercase;
@@ -106,7 +123,8 @@ a.navigation-button::after{
     font-style: inherit;
     font-weight: bold;
 }
-.header-signature{
+
+.header-signature {
     font-family: 'Pacifico', cursive;
     letter-spacing: 1px;
     text-transform: capitalize;
@@ -116,7 +134,8 @@ a.navigation-button::after{
     font-weight: 500;
     margin: 20px;
 }
-#request-demo{
+
+#request-demo {
     padding: 0.6vw 1.2vw;
     border: none;
     border-radius: 3px;
@@ -127,7 +146,9 @@ a.navigation-button::after{
     font-size: 0.6vw;
     letter-spacing: 1px;
     transition: 0.2s;
- }
- #request-demo:hover{
-    background-color: rgb(255, 159, 13)    
- }
+}
+
+#request-demo:hover {
+    background-color: rgb(255, 159, 13)
+}
+
