@@ -4,27 +4,33 @@ body, html{
     overflow: auto;
 }
 .bgimg-1{
-    background-attachment: fixed;
-    background-size: cover;
     background-repeat: no-repeat;
+    background-size: cover;
     background-image: url("https://binh1298.github.io/resources/images/home-head.jpg");
     min-height: 100%;
 }
-.bg-overlay-dark{
+.dark-filter{
     background-color: rgba(0, 0, 0, 0.6);
-    min-height: 100%;
 }
-.bg-overlay-foggy{
+.foggy-filter{
     background-color: rgba(255, 255, 255, 0.08);
-    min-height: 100%;
 }
+.bg-overlay{
+    position: absolute;
+    size: 100%;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+
 .header-disapearing-bar-grid{
     padding-top: 10px;
-    padding-right: 20%;
     padding-bottom: 5px;
-    padding-left: 20%;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: 61.5% 38.5%;
+    grid-template-columns: 65% 35%;
+    min-width: 1150px;
+    max-width: 70vw;
 }
 .home-button{
     text-align: left;
@@ -32,7 +38,7 @@ body, html{
 }
 .navigation-button-container-grid{
     display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-columns: 20% 20% 24% 16% 20%;
 }
 a.navigation-button{
     position:relative;
@@ -42,7 +48,6 @@ a.navigation-button{
     color: white;
     font-size: 13px;
     font-weight: 600;
-    text-align: center;
     margin-top: 30px;
 }
 /* Hover Animation */
@@ -52,46 +57,34 @@ a.navigation-button::after{
     position: absolute;
     bottom: 18px;
     height: 2px;
-    width: 0%;
+    left: 0;
+    width: 0;
     opacity: 0;
     background:white; 
 }
 
 #home::after{
-    left: 25px;
-    width: 38px;
+    width: 3em;
     opacity: 1;
 }
 
-a.navigation-button#story::after{
-    left: 22px;
-}
 #story:hover::after{
-    width: 42px;
+    width: 3.2em;
     opacity: 1;
 }
 
-a.navigation-button#gallery::after{
-    left: 14px;
-}
 #gallery:hover::after{
-    width: 58px;
+    width: 4.4em;
     opacity: 1;
 }
 
-a.navigation-button#menu::after{
-    left: 25px;
-}
 #menu:hover::after{
-    width: 38px;
+    width: 2.8em;
     opacity: 1;
 }
 
-a.navigation-button#contact::after{
-    left: 14px;
-}
 #contact:hover::after{
-    width: 60px;
+    width: 4.6em;
     opacity: 1;;
 }
 
@@ -100,11 +93,14 @@ a.navigation-button#contact::after{
 .header-content-container{
     text-align: center;
 }
+.header-divider{
+    height: 20vh;
+}
 .header-slogan{
     font-family: 'Noto Sans', sans-serif;
     letter-spacing: 6px;
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 1vw;
     color: white;
     text-align: center;
     font-style: inherit;
@@ -114,23 +110,22 @@ a.navigation-button#contact::after{
     font-family: 'Pacifico', cursive;
     letter-spacing: 1px;
     text-transform: capitalize;
-    font-size: 78px;
+    font-size: 4vw;
     color: white;
     text-align: center;
     font-weight: 500;
-    margin: 10px;
+    margin: 20px;
 }
 #request-demo{
-    padding: 12px 24px;
+    padding: 0.6vw 1.2vw;
     border: none;
     border-radius: 3px;
     background-color: white;
     font-family: 'Noto Sans', sans-serif;
     text-decoration-color: #252525;
     font-weight: bolder;
-    font-size: 12px;
+    font-size: 0.6vw;
     letter-spacing: 1px;
-    margin-bottom: 410px;
     transition: 0.2s;
  }
  #request-demo:hover{
