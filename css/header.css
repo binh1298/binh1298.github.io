@@ -12,35 +12,6 @@ body,html {
     }
 }
 
-.parallax{
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center center;
-    position: relative;
-    height: 100%;
-    
-}
-.bgimg-1 {
-    background-image: url("https://binh1298.github.io/resources/images/home-head.jpg");
-   
-}
-
-.dark-filter {
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
-.foggy-filter {
-    background-color: rgba(255, 255, 255, 0.08);
-}
-
-.bg-overlay {
-    position: absolute;
-    size: 100%;
-    min-height: 100%;
-    min-width: 100%;
-}
-
 .header-disapearing-bar-grid {
     padding-top: 10px;
     padding-bottom: 20px;
@@ -111,10 +82,6 @@ a.navigation-button::after {
 }
 
 /* ---------- */
-
-.header-content-container {
-    text-align: center;
-}
 
 .header-spacer {
     height: 16vh;

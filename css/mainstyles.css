@@ -1,3 +1,33 @@
+.parallax{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    position: relative;
+    height: 100%;
+    
+}
+.bgimg-1 {
+    background-image: url("https://binh1298.github.io/resources/images/home-head.jpg");
+}
+.bgimg-2 {
+    background-image: url("https://binh1298.github.io/resources/images/home-03.jpg");
+}
+.dark-filter {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.foggy-filter {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.bg-overlay {
+    position: absolute;
+    size: 100%;
+    min-height: 100%;
+    min-width: 100%;
+}
+
 .slogan{
     font-family: 'Noto Sans', sans-serif;
     letter-spacing: 6px;
@@ -16,6 +46,7 @@
 }
 .passage{
     font-family: 'Noto Sans', sans-serif;
+    text-align: center;
     font-size: 0.85vw;
     padding: 3%;
     width: 80%;
