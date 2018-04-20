@@ -8,3 +8,57 @@
 .large-passage{
     width: 40%;
 }
+.features-grid{
+    width: 60%;
+    height: 60%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 70% 30%;
+}
+.svg-grid{
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: 33% 33% 33%;
+}
+.svg-grid > div{
+    margin: 0 auto;
+}
+.white-circle{
+    position: relative;
+}
+.white-circle > span{
+    width: 240px;
+    height: 240px;
+    display: inline-block;
+    overflow: hidden;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px rgb(255, 255, 255);
+}
+.white-circle > svg{
+    position: absolute;
+    top: 80px;
+}
+.svg-top{
+    left: 80px;
+    fill: #bbb;
+}
+.svg-bottom{
+    left: 0px;
+    fill: white;
+    opacity: 0;
+    transition: 0s;
+}
+.white-circle:hover > span{
+    opacity: 0.3;
+    box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.5);
+}
+.white-circle:hover > .svg-top{
+    opacity: 0;
+}
+.white-circle:hover > .svg-bottom{
+    opacity: 1;
+    left: 80px;
+    transition: 0.4s;
+}
