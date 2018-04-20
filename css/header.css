@@ -6,16 +6,24 @@ body,html {
 
 @media screen and (max-width: 1200px) {
     div.disappear-in-small-screen{
-        display: none;
+    display: none;
+    box-sizing: border-box;
+    float: left;
     }
 }
 
-.bgimg-1 {
+.parallax{
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-y: -150px;
+    background-attachment: fixed;
+    background-position: center center;
+    position: relative;
+    height: 100%;
+    
+}
+.bgimg-1 {
     background-image: url("https://binh1298.github.io/resources/images/home-head.jpg");
-    min-height: 100%;
+   
 }
 
 .dark-filter {
@@ -73,7 +81,7 @@ a.navigation-button::after {
     height: 2px;
     left: 0;
     width: 0;
-    opacity: 0;
+    opacity: 1;
     background: white;
 }
 
@@ -100,7 +108,6 @@ a.navigation-button::after {
 #contact:hover::after {
     width: 4.6em;
     opacity: 1;
-    ;
 }
 
 /* ---------- */
@@ -109,25 +116,11 @@ a.navigation-button::after {
     text-align: center;
 }
 
-.header-divider {
+.header-spacer {
     height: 16vh;
 }
 
-.header-slogan {
-    font-family: 'Noto Sans', sans-serif;
-    letter-spacing: 6px;
-    text-transform: uppercase;
-    font-size: 1vw;
-    color: white;
-    text-align: center;
-    font-style: inherit;
-    font-weight: bold;
-}
-
 .header-signature {
-    font-family: 'Pacifico', cursive;
-    letter-spacing: 1px;
-    text-transform: capitalize;
     font-size: 4vw;
     color: white;
     text-align: center;
