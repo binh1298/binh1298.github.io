@@ -8,27 +8,42 @@
 .large-passage{
     width: 40%;
 }
+
 .features-grid{
     width: 60%;
     height: 60%;
     margin: 0 auto;
     display: grid;
     grid-template-rows: 70% 30%;
+    position: relative;
+}
+.hyphens-hr{
+    position: absolute;
+    left: 8%;
+    top: 30%;
+    border:none;
+    border-top: 0.5px dashed rgba(255, 255, 255, 0.5);
+    height: 0.5px;
+    width: 84%;
 }
 .svg-grid{
+    margin: 0.1vw;
     display: grid;
     justify-content: space-evenly;
     grid-template-columns: 33% 33% 33%;
 }
 .svg-grid > div{
     margin: 0 auto;
+    text-align: center;
 }
 .white-circle{
     position: relative;
 }
 .white-circle > span{
-    width: 240px;
-    height: 240px;
+    max-width: 240px;
+    max-height: 240px;
+    width: 12vw;
+    height: 12vw;
     display: inline-block;
     overflow: hidden;
     background-color: white;
@@ -38,10 +53,10 @@
 }
 .white-circle > svg{
     position: absolute;
-    top: 80px;
+    top: 4vw;
 }
 .svg-top{
-    left: 80px;
+    left: 4vw;
     fill: #bbb;
 }
 .svg-bottom{
@@ -59,6 +74,9 @@
 }
 .white-circle:hover > .svg-bottom{
     opacity: 1;
-    left: 80px;
+    left: 4vw;
     transition: 0.4s;
+}
+.main-feature{
+    width: 100%;
 }

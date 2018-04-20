@@ -24,10 +24,8 @@ img{
 .foggy-filter {
     background-color: rgba(255, 255, 255, 0.08);
 }
-
 .bg-overlay {
     position: absolute;
-    size: 100%;
     min-height: 100%;
     min-width: 100%;
 }
@@ -52,7 +50,7 @@ img{
     font-family: 'Noto Sans', sans-serif;
     text-align: center;
     font-size: 0.85vw;
-    padding: 3%;
-    width: 80%;
+    padding: 5%;
+    width: 90%;
     margin: 0 auto;
 }
