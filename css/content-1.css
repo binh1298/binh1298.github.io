@@ -1,0 +1,40 @@
+.content-1{
+    background-color: white;
+    width: 100%;
+}
+.content-1-spacer{
+    height: 6vw;
+}
+.row-flex-container{
+    display: flex;
+    background-color: white;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.content-1-left-box{
+    max-width: 28vw;
+}
+.content-1-left-box > div{
+    text-align: center;
+}
+.content-1-right-box{
+    max-width: 28vw;
+}
+
+.our-story{
+    padding: 5%;
+    padding-top: 10%;
+    font-size: 0.9vw;
+}
+.about-danae{
+    font-weight: 500;
+    font-size: 2vw;
+}
+.read-more{
+    display: inline;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bolder;
+    font-size: 0.8vw;
+    letter-spacing: 1px;
+}
