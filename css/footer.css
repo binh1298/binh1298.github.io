@@ -1,0 +1,40 @@
+.footer{
+    background-color: black;
+    text-align: center;
+}
+.footer-spacer{
+    height: 3.5vh;
+}
+.footer-hr{
+    border: none;
+    height: 0.6px;
+    width: 60%;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.social-media-icons > svg{
+    padding: 1vw;
+    max-width: 0.8vw;
+    max-height: 0.8vw;
+}
+.svg-footer{
+    fill: white;
+    margin: 0 auto;
+}
+.footer-grid{
+    display: grid;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-row-gap: 2vw;
+}
+.footer-grid > div{
+    font-size: 0.9vw;
+}
+.footer-info{
+    margin: 0 auto;
+    max-width: 60%;
+}
+.footer-caption{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8vw;
+    color: rgba(150, 150, 150, 0.8);
+    padding: 0;
+}
