@@ -1,0 +1,40 @@
+/* FINGER LICKIN’ GOOD */
+.content-5{
+    background-color: white;
+    width: 100%;
+}
+.row-flex-container{
+    display: flex;
+    background-color: white;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.content-5-right-box{
+    max-width: 28vw;
+}
+.content-5-right-box > div{
+    text-align: center;
+}
+.content-5-left-box{
+    max-width: 28vw;
+    margin-right: 5vw;
+}
+
+.our-story{
+    padding: 5%;
+    padding-top: 10%;
+    font-size: 0.9vw;
+}
+.about-danae{
+    font-weight: 500;
+    font-size: 2vw;
+}
+.read-more{
+    display: inline;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bolder;
+    font-size: 0.8vw;
+    letter-spacing: 1px;
+    margin: 0 auto;
+}
