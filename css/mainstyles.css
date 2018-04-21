@@ -1,7 +1,7 @@
 body,html {
-    height: 100%;
     margin: 0;
-    overflow: auto;
+    overflow: visible;
+    position: relative;
 }
 
 @media screen and (max-width: 1200px) {
@@ -46,6 +46,21 @@ img{
     position: absolute;
     min-height: 100%;
     min-width: 100%;
+}
+
+.reveal-animation{
+    position: relative;
+    opacity: 0;
+    top: 30px;
+    transition: 1s;
+}
+.slide-in-from-bottom{
+    opacity: 1 !important;
+    top: 0 !important;
+}
+.display-none{
+    opacity: 0;
+    display: none;
 }
 
 .slogan{

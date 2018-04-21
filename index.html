@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/mainstyles.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/sticky_bar.css">
     <link rel="stylesheet" href="css/content_1.css">
     <link rel="stylesheet" href="css/content_2.css">
     <link rel="stylesheet" href="css/content_3.css">
@@ -18,6 +19,20 @@
     <title>Binh's Egg Shop</title>
 </head>
 <body>
+    <div class="sticky-bar display-none"> <!-- Disapearing trasnparent bar -->
+        <div class="header-sticky-bar-grid"> <!-- Aligned the context to the middle-->
+            <a href="#" class="home-button-sticky">
+                <img src="resources/images/logo-light.png" alt="Home button" style="display: block; margin:10px">
+            </a>
+            <div class="navigation-button-container-grid">
+                <a class="navigation-button-sticky" id="home" href="#">HOME</a>
+                <a class="navigation-button-sticky" id="story" href="#">STORY</a>
+                <a class="navigation-button-sticky" id="gallery" href="#">GALLERY</a>
+                <a class="navigation-button-sticky" id="menu" href="#">MENU</a>
+                <a class="navigation-button-sticky" id="contact" href="#">CONTACT</a>  
+            </div>  
+        </div>
+    </div> 
     <div class="parallax bgimg-1">
         <div class="bg-overlay dark-filter">
             <div class="bg-overlay foggy-filter">
@@ -36,14 +51,15 @@
                     </div>
                     <hr>
                 </div> 
-
+                
                 <div>
                     <div class="header-spacer"></div>
                     <div class="header-spacer"></div>
                     <center><img src="resources/images/home-headdecor.png" alt="" style="width: 13vw"></center>
                     <br>
                     <p class="slogan white-font">DELICIOUS FOOD. TO FIT YOUR LIFESTYLE.</p>
-                    <p class="header-signature soft">Yours Truly Restaurant</p>
+                    <p class="header-signature soft reveal-animation">Yours Truly Restaurant</p>
+
                     <center><button class="request-demo">REQUEST DEMO</button></center>
                     <div class="header-spacer"></div>
                 </div>          
@@ -56,7 +72,7 @@
         <div class="row-flex-container">
             <div class="content-1-left-box">
                 <div class="slogan our-story">Our Story</div>
-                <div class="soft about-danae">About Danae</div>
+                <div class="soft about-danae reveal-animation">About Danae</div>
                 <div><img src="https://binh1298.github.io/resources/images/black-dots.png" alt=""></div>
                 <div class="passage ">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam.</div>
                 <div>
@@ -78,7 +94,7 @@
                 <div>
                     <div class="header-spacer"></div>
                     <p class="slogan white-font">FOOD FOR THE ENTIRE FAMILY!</p>
-                    <p class="make-people-happy soft">Make People Happy</p>
+                    <p class="make-people-happy soft reveal-animation">Make People Happy</p>
                     <center><img src="https://binh1298.github.io/resources/images/white-dots.png" alt=""></center>
                     <div class="passage white-font large-passage">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.</div>
                     
@@ -141,7 +157,7 @@
             <div class="header-spacer"></div>
             <div class="header-spacer"></div>
             <div class="slogan the-menu">THE MENU</div>
-            <div class="soft specials">Specials</div>
+            <div class="soft specials reveal-animation">Specials</div>
             <div><img src="https://binh1298.github.io/resources/images/black-dots.png" alt=""></div>
             <div class="header-spacer"></div>
         </div>
@@ -250,7 +266,7 @@
                     <div class="header-spacer"></div>
                     <div class="header-spacer"></div>
                     <p class="slogan white-font">FOOD IS LOVE</p>
-                    <p class="make-people-happy soft">Come Hungry. Leave Happy</p>
+                    <p class="make-people-happy soft reveal-animation">Come Hungry. Leave Happy</p>
                     <center><img src="https://binh1298.github.io/resources/images/white-dots.png" alt=""></center>
                     <div class="passage white-font large-passage">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.</div>
                     <div class="header-spacer"></div>
@@ -266,7 +282,7 @@
         <div class="content-1-spacer"></div>
         <div class="row-flex-container">
             <div class="content-5-left-box">
-                <img src="https://binh1298.github.io/resources/images/home-05.jpg" alt="Home">
+                <img class="reveal-animation" src="https://binh1298.github.io/resources/images/home-05.jpg" alt="Home">
             </div>
             <div class="content-5-right-box">
                 <div class="slogan our-story">FINGER LICKIN’ GOOD</div>
@@ -289,7 +305,7 @@
                     <div class="header-spacer"></div>
                     <div class="header-spacer"></div>
                     <p class="slogan white-font">DISCOVER</p>
-                    <p class="make-people-happy soft">Our Gallery</p>
+                    <p class="make-people-happy soft reveal-animation">Our Gallery</p>
                     <center><img src="https://binh1298.github.io/resources/images/white-dots.png" alt=""></center>
                     <div class="header-spacer"></div>
 
@@ -372,5 +388,6 @@
         </div>   
         <div class="footer-spacer"></div>                        
     </div>
+    <script src="scripts/animation-activator.js"></script>
 </body>
 </html>

@@ -79,20 +79,8 @@ a.navigation-button::after {
     text-align: center;
     font-weight: 500;
     margin: 20px;
-    position: relative;
-    animation-name: HeaderSignature;
-    animation-duration: 0.5s;
 }
-@keyframes HeaderSignature{
-    from {
-        opacity: 0;
-        top: 30px;
-    }
-    to {
-        opacity: 1;
-        top: 0;
-    }
-}
+
 .request-demo {
     padding: 0.6vw 1.2vw;
     border: none;
