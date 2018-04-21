@@ -2,11 +2,9 @@
     background-color: white;
     margin: 0 auto;
 }
-
 .content-3-title > div{
     text-align: center;
 }
-
 .the-menu{
     font-size: 0.9vw;
 }
@@ -17,7 +15,7 @@
 .food-menu-grid{
     display: grid;
     grid-template-columns: 40% 10% 40% 10%;
-    width: 70%;
+    width: 60%;
 }
 .menu-column-grid{
     display: grid;
@@ -25,7 +23,7 @@
 }
 .food-menu-side-grid{
     display: grid;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 65% 35%;
 }
 .grid-spacer{
     height: 5%;
@@ -34,7 +32,7 @@
     border: none;
     background-color: rgba(187, 187, 187, 0.4);
     width: 100%;
-    height: 5px;
+    height: 3px;
 }
 .item-hr{
     border: none;
@@ -44,8 +42,8 @@
 }
 .types-of-menu-items > div{
     font-family: 'Noto Sans', sans-serif;
-    font-size: 1.8vw;
-    font-weight: 600;
+    font-size: 1.4vw;
+    font-weight: bold;
     padding-bottom: 7%;
 }
 .types-of-menu-items > hr{
@@ -53,12 +51,12 @@
 }
 .menu-item{
     font-family: 'Noto Sans', sans-serif;
-    font-size: 1.6vw;
-    font-weight: 600;
+    font-size: 1.2vw;
+    font-weight: bold;
 }
 .item-caption{
     font-family: 'Noto Sans', sans-serif;
-    font-size: 1vw;
+    font-size: 0.8vw;
     font-weight: 400;
     color: rgb(150, 150, 150);
     padding-top: 7%;
@@ -67,19 +65,32 @@
 .price{
     text-align: center;
 }
-.see-all-menu{
-    padding: 0.6vw 1.2vw;
+.btn-see-all-menu{
+    min-width: 9vw;
+    min-height: 2.5vw;
     border: none;
     border-radius: 3px;
     background-color: black;
+    position: relative;
+}
+.see-all-menu{
     font-family: 'Noto Sans', sans-serif;
     color: white;
-    font-weight: bolder;
-    font-size: 0.8vw;
+    font-weight: bold;
+    font-size: 0.6vw;
     letter-spacing: 1px;
     transition: 0.2s;
+    padding-left: 15%;
 }
-
-.request-demo:hover {
+.white-arrow{
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+    display: inline;
+    max-width: 0.8vw;
+    position: absolute;
+    left: 15%;
+    top: 35%;
+}
+.btn-see-all-menu:hover {
     background-color: rgb(255, 159, 13)
 }

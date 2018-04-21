@@ -1,3 +1,16 @@
+body,html {
+    height: 100%;
+    margin: 0;
+    overflow: auto;
+}
+
+@media screen and (max-width: 1200px) {
+    div.disappear-in-small-screen{
+    display: none;
+    box-sizing: border-box;
+    float: left;
+    }
+}
 img{
     max-width:100%;
     max-height:100%;
