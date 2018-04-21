@@ -33,6 +33,9 @@ img{
 .bgimg-3 {
     background-image: url("https://binh1298.github.io/resources/images/home-04.jpg");
 }
+.bgimg-4 {
+    background-image: url("https://binh1298.github.io/resources/images/home-06.jpg");
+}
 .dark-filter {
     background-color: rgba(0, 0, 0, 0.6);
 }
