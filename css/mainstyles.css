@@ -6,7 +6,7 @@ html {
 }
 
 
-@media only screen and (max-width: 400px) {
+/* @media only screen and (max-width: 400px) {
     .parallax{
         min-height: 35vh !important;
     }
@@ -63,13 +63,13 @@ html {
         box-sizing: border-box;
         float: left;
     }
-}
+} */
 img {
     max-width: 100%;
     max-height: 100%;
 }
 .header-spacer {
-    height: 5vh;
+    height: 19vh;
 }
 .parallax {
     background-repeat: no-repeat;
@@ -77,23 +77,26 @@ img {
     background-attachment: fixed;
     background-position: center center;
     position: relative;
-    min-height: 100vh;
 }
 
 .bgimg-1 {
     background-image: url("https://binh1298.github.io/resources/images/home-head.jpg");
+    min-height: 110vh;
 }
 
 .bgimg-2 {
     background-image: url("https://binh1298.github.io/resources/images/home-03.jpg");
+    min-height: 140vh;
 }
 
 .bgimg-3 {
     background-image: url("https://binh1298.github.io/resources/images/home-04.jpg");
+    min-height: 120vh;
 }
 
 .bgimg-4 {
     background-image: url("https://binh1298.github.io/resources/images/home-06.jpg");
+    min-height: 140vh;
 }
 
 .dark-filter {
@@ -113,8 +116,8 @@ img {
 .reveal-animation {
     position: relative;
     opacity: 0;
-    top: 30px;
-    transition: 1s;
+    top: 200px;
+    transition: 0.6s;
 }
 
 .slide-in-from-bottom {
@@ -129,11 +132,11 @@ img {
 
 .slogan {
     font-family: 'Noto Sans', sans-serif;
-    letter-spacing: 6px;
+    letter-spacing: 0.5vw;
     text-transform: uppercase;
-    font-size: 1vw;
+    font-size: 1.3vw;
     text-align: center;
-    font-weight: bold;
+    font-weight: 800;
 }
 
 .white-font {
@@ -144,13 +147,21 @@ img {
     font-family: 'Pacifico', cursive;
     letter-spacing: 1px;
     text-transform: capitalize;
+    font-size: 5.6vw;
 }
 
 .passage {
     font-family: 'Noto Sans', sans-serif;
     text-align: center;
-    font-size: 0.85vw;
+    font-size: 1.2vw;
     padding: 5%;
     width: 90%;
     margin: 0 auto;
+}
+.large-passage{
+    padding: 1%;
+    width: 55%;
+}
+.pale-font{
+    opacity: 0.8;
 }

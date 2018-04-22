@@ -1,22 +1,21 @@
 /* Make People Happy */
 .make-people-happy{
-    font-size: 3vw;
+    font-size: 4vw;
     color: white;
     text-align: center;
     font-weight: 500;
     margin: 1.5vw;
 }
-.large-passage{
-    width: 38%;
-}
-
 .features-grid{
-    width: 60%;
-    height: 60%;
+    width: 80%;
+    height: 80%;
     margin: 0 auto;
     display: grid;
     grid-template-rows: 70% 30%;
     position: relative;
+}
+.content-2-container{
+    min-width: 80%;
 }
 .hyphens-hr{
     position: absolute;
@@ -41,10 +40,10 @@
     position: relative;
 }
 .white-circle > span{
-    max-width: 240px;
-    max-height: 240px;
-    width: 12vw;
-    height: 12vw;
+    min-width: 4vw;
+    min-height: 4vw;
+    width: 16vw;
+    height: 16vw;
     display: inline-block;
     overflow: hidden;
     background-color: white;
@@ -54,10 +53,10 @@
 }
 .white-circle > svg{
     position: absolute;
-    top: 4vw;
+    top: 5vw;
 }
 .svg-top{
-    left: 4vw;
+    left: 5vw;
     fill: #bbb;
 }
 .svg-bottom{
@@ -75,7 +74,7 @@
 }
 .white-circle:hover > .svg-bottom{
     opacity: 1;
-    left: 4vw;
+    left: 5vw;
     transition: 0.4s;
 }
 .main-feature{
