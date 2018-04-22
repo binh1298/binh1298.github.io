@@ -27,7 +27,7 @@ html {
 
 @media only screen and (min-width: 961px) {
     .parallax{
-        min-height: 65vh !important;
+        min-height: 85vh !important;
     }
     .header-spacer{
         height: 3vh !important;
@@ -35,15 +35,15 @@ html {
 }
 @media screen and (min-width: 1200px) {
     .parallax{
-        min-height: 75vh !important;
+        min-height: 100vh !important;
     }
     .header-spacer{
-        height: 4vh !important;
+        height: 3vh !important;
     }
 }
 @media screen and (min-width: 1600px) {
     .parallax{
-        min-height: 95vh !important;
+        min-height: 110vh !important;
     }
     .header-spacer{
         height: 4.5vh !important;
@@ -51,7 +51,7 @@ html {
 }
 @media screen and (min-width: 1900px) {
     .parallax{
-        min-height: 100vh !important;
+        min-height: 115vh !important;
     }
     .header-spacer{
         height: 5vh !important;
