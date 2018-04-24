@@ -1,9 +1,7 @@
+/* The Menu */
 .content-3 > div{
     background-color: white;
     margin: 0 auto;
-}
-.content-3-spacer{
-    height: 12vh;
 }
 .content-3-title > div{
     text-align: center;

@@ -23,28 +23,13 @@
     margin-top: 5px;
 }
 
-.navigation-button-sticky {
+.sticky-font {
     position: relative;
     display: block;
     font-family: 'Nunito', sans-serif;
     text-decoration-line: none;
-    color: rgba(150, 150, 150, 1);
-    font-size: 13px;
-    font-weight: 600;
+    color: rgba(150, 150, 150, 1) !important; 
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
-/* Hover Animation */
-
-a.navigation-button-sticky::after {
-    content: "";
-    transition: 0.3s all ease;
-    position: absolute;
-    top: 1vw;
-    height: 2px;
-    left: 0;
-    width: 0;
-    opacity: 1;
-    background: white;
-}

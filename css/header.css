@@ -1,17 +1,18 @@
 .header-disapearing-bar-grid {
-    padding-top: 10px;
-    padding-bottom: 20px;
+    padding-top: 0.6vw;
+    padding-bottom: 1.6vw;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 65% 35%;
     min-width: 1150px;
     max-width: 60vw;
 }
-.home-button {
-    text-align: left;
-    margin: 10px;
+.home-logo {
+    box-sizing: border-box;
+    float: left;
+    margin-top: 1.4vw;
+    min-width: 7vw;
 }
-
 .navigation-button-container-grid {
     display: grid;
     grid-template-columns: 20% 20% 24% 16% 20%;
@@ -23,9 +24,9 @@ a.navigation-button {
     font-family: 'Nunito', sans-serif;
     text-decoration-line: none;
     color: white;
-    font-size: 13px;
+    font-size: 1vw;
     font-weight: 600;
-    margin-top: 30px;
+    margin-top: 2vw;
 }
 
 /* Hover Animation */
@@ -34,8 +35,8 @@ a.navigation-button::after {
     content: "";
     transition: 0.3s all ease;
     position: absolute;
-    bottom: -2px;
-    height: 2px;
+    bottom: -0.3px;
+    height: 0.15vw;
     left: 0;
     width: 0;
     opacity: 1;

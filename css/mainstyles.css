@@ -5,13 +5,13 @@ html {
     position: relative;
 }
 
-
-/* @media only screen and (max-width: 400px) {
+/* 
+@media only screen and (max-width: 400px) {
     .parallax{
         min-height: 35vh !important;
     }
     .header-spacer{
-        height: 1vh !important;
+        height: 3vh !important;
     }
 }
 
@@ -21,7 +21,7 @@ html {
         min-height: 55vh !important;
     }
     .header-spacer{
-        height: 2vh !important;
+        height: 6vh !important;
     }
 }
 
@@ -30,7 +30,7 @@ html {
         min-height: 85vh !important;
     }
     .header-spacer{
-        height: 3vh !important;
+        height: 9vh !important;
     }
 }
 @media screen and (min-width: 1200px) {
@@ -38,7 +38,7 @@ html {
         min-height: 100vh !important;
     }
     .header-spacer{
-        height: 3vh !important;
+        height: 9vh !important;
     }
 }
 @media screen and (min-width: 1600px) {
@@ -46,7 +46,7 @@ html {
         min-height: 110vh !important;
     }
     .header-spacer{
-        height: 4.5vh !important;
+        height: 13vh !important;
     }
 }
 @media screen and (min-width: 1900px) {
@@ -54,16 +54,17 @@ html {
         min-height: 115vh !important;
     }
     .header-spacer{
-        height: 5vh !important;
+        height: 15vh !important;
     }
-}
+} */
+
 @media screen and (max-width: 1200px) {
     div.disappear-in-small-screen {
         display: none !important;
         box-sizing: border-box;
         float: left;
     }
-} */
+}
 img {
     max-width: 100%;
     max-height: 100%;
@@ -96,7 +97,7 @@ img {
 
 .bgimg-4 {
     background-image: url("https://binh1298.github.io/resources/images/home-06.jpg");
-    min-height: 140vh;
+    min-height: 180vh;
 }
 
 .dark-filter {

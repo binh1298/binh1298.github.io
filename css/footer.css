@@ -8,17 +8,20 @@
 .footer-hr{
     border: none;
     height: 1px;
-    width: 60%;
+    width: 60%; 
     background-color: rgba(255, 255, 255, 0.3);
 }
 .social-media-icons > svg{
     padding: 1vw;
-    max-width: 0.8vw;
-    max-height: 0.8vw;
+    max-width: 1.2vw;
+    max-height: 1.2vw;
 }
 .svg-footer{
     fill: white;
     margin: 0 auto;
+}
+.svg-footer:hover{
+    fill: #bbb;
 }
 .footer-grid{
     display: grid;
