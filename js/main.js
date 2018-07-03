@@ -17,40 +17,54 @@ function showLandingPage()
   introVid.style.opacity = 0;
   setTimeout(vanishVid, 1000);
   var danteContainer = document.getElementById("dante-container");
-  var neroContainer = document.getElementById("nero-container");
+  var neroContainerChild = document.getElementById("nero-container-child");
   danteContainer.style.left = 0;
-  neroContainer.style.right = 0;
+  neroContainerChild.style.right = "-50vw";
 }
 function changeHalfsSizes(object, event)
 {
+
   var currentMouseVerticalPos = event.clientX;
   var totalWidth = screen.width;
-  var halfsContainer = document.getElementById("halfs-container")
   var danteContainer = document.getElementById("dante-container");
   var neroContainer = document.getElementById("nero-container");
+  var neroContainerChild = document.getElementById("nero-container-child");
   var currentRatio = currentMouseVerticalPos/totalWidth;
   console.log(currentRatio);
+  if(currentRatio < 0.2) currentRatio = 0;
+  if(currentRatio > 0.8) currentRatio = 1;
   if(currentRatio > 0.5)
   {
-    halfsContainer.style.gridTemplateColumns = (1-currentRatio)*100 + "% " + currentRatio*100 + "%";
-    danteContainer.style.opacity = (1 - currentRatio)*2;
+    neroContainerChild.style.right = "-" + (1-(currentRatio-0.5)*2)*50 + "vw";
+    neroContainer.style.zIndex = 2;
+    danteContainer.style.zIndex = 1;
+    danteContainer.style.opacity = (1-currentRatio)*2;
+    var tempArr = neroContainerChild.getElementsByTagName("*");
+    for(var i = 0; i<tempArr.length; i++)
+    {
+      tempArr[i].style.right = (1-(currentRatio-0.5)*2)*50 +"vw";
+    }
   }
   else
   {
-    neroContainer.style.width = "100%";
-    danteContainer.style.width = (1-currentRatio)*200 + "%";
-    danteContainer.style.zIndex = 1;
+    danteContainer.style.width = (1-currentRatio)*100 + "vw";
+    danteContainer.style.zIndex = 2;
+    neroContainer.style.zIndex = 1;
     neroContainer.style.opacity = currentRatio*2;
   }
 }
 function resetDefaultHalfsSizes()
 {
-  var halfsContainer = document.getElementById("halfs-container")
   var danteContainer = document.getElementById("dante-container");
   var neroContainer = document.getElementById("nero-container");
-  halfsContainer.style.gridTemplateColumns = "50% 50%";
-  danteContainer.style.width = "100%";
-  neroContainer.style.width = "100%"; 
+  var neroContainerChild = document.getElementById("nero-container-child");
+  danteContainer.style.width = "50vw";
+  neroContainerChild.style.right = "-50vw";
+  var tempArr = neroContainerChild.getElementsByTagName("*");
+  for(var i = 0; i<tempArr.length; i++)
+  {
+    tempArr[i].style.right = "50vw";
+  }
   danteContainer.style.opacity = 1;
   neroContainer.style.opacity = 1;
 }

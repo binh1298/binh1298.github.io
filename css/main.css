@@ -3,6 +3,9 @@ html, body{
   margin: 0;
   background-color: black;
 }
+body *{
+  transition: 0.5s all ease-out;
+}
 img{
   width: 100%;
 }
@@ -22,33 +25,32 @@ video{
   z-index: 2;
 }
 .father-half-container{
-  display: grid;
-  grid-template-columns: 50% 50%;
+  position: relative;
+}
+#dante-container{
+  width: 50vw;
+  overflow: hidden;
+  position: absolute;
+  left: -50vw;
+}
+#nero-container{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
 }
 .grid-half-container{
   width: 100vw;
+  overflow: hidden;
   display: grid;
   grid-template-columns: 50% 50%;
   height: 100%;
 }
-#dante-container{
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  left: -100vw;
-  transition: 1s left ease;
-  transition: 1.2s opacity ease;
-}
-#nero-container{
-  width: 100%;
-  overflow: hidden;
-  /* Move the nero bg to the left */
+.hc-right{
   position: relative;
   right: -100vw;
-  transition: 1s right ease;
-  transition: 1.2s opacity ease;
 }
-.hc-right{
-  position: absolute;
-  right: 0;
+.hc-right div{
+  position: relative;
+  right: 50vw;
 }
