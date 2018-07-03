@@ -1,3 +1,5 @@
+var disableIntroVid = false;
+
 function pauseIntro()
 {
   var introVid = document.getElementById("introVid");
@@ -12,6 +14,7 @@ function showLandingPage()
   var introVid = document.getElementById("introVid");
   function vanishVid(){
     introVid.style.display = "none";
+    disableIntroVid = true;
   }
   // Combine with css to make slow transition
   introVid.style.opacity = 0;
@@ -23,14 +26,14 @@ function showLandingPage()
 }
 function changeHalfsSizes(object, event)
 {
-
+  if(screen.width < 1024 || !disableIntroVid) return;
   var currentMouseVerticalPos = event.clientX;
   var totalWidth = screen.width;
   var danteContainer = document.getElementById("dante-container");
   var neroContainer = document.getElementById("nero-container");
   var neroContainerChild = document.getElementById("nero-container-child");
   var currentRatio = currentMouseVerticalPos/totalWidth;
-  console.log(currentRatio);
+  // console.log(currentRatio);
   if(currentRatio < 0.2) currentRatio = 0;
   if(currentRatio > 0.8) currentRatio = 1;
   if(currentRatio > 0.5)
