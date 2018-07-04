@@ -1,3 +1,5 @@
+var disableIntroVid = false;
+
 function pauseIntro()
 {
   var introVid = document.getElementById("introVid");
@@ -11,26 +13,33 @@ function showLandingPage()
 {
   var introVid = document.getElementById("introVid");
   function vanishVid(){
-    introVid.style.display = "none";
+    introVid.style.opacity = "0";
+    introVid.style.zIndex = "-1";
+    disableIntroVid = true;
   }
   // Combine with css to make slow transition
   introVid.style.opacity = 0;
   setTimeout(vanishVid, 1000);
   var danteContainer = document.getElementById("dante-container");
   var neroContainerChild = document.getElementById("nero-container-child");
+  var navBar = document.getElementsByClassName("nav-bar")[0];
   danteContainer.style.left = 0;
   neroContainerChild.style.right = "-50vw";
+  navBar.style.top = 0;
+  setTimeout(function(){
+    navBar.style.opacity = 0.3;
+  }, 1000);
 }
 function changeHalfsSizes(object, event)
 {
-
+  if(screen.width <= 1024 || !disableIntroVid) return;
   var currentMouseVerticalPos = event.clientX;
   var totalWidth = screen.width;
   var danteContainer = document.getElementById("dante-container");
   var neroContainer = document.getElementById("nero-container");
   var neroContainerChild = document.getElementById("nero-container-child");
   var currentRatio = currentMouseVerticalPos/totalWidth;
-  console.log(currentRatio);
+  // console.log(currentRatio);
   if(currentRatio < 0.2) currentRatio = 0;
   if(currentRatio > 0.8) currentRatio = 1;
   if(currentRatio > 0.5)

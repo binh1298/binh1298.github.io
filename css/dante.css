@@ -1,0 +1,20 @@
+.grid-dante-section{
+  background-image: url("../resources/images/dante_section/red-bg.jpg");
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+#dante-model-front{
+  z-index: 4;
+}
+#dante-model-front img{
+  margin-left: 20%;
+  width: 70%;
+}
+#dante-model-back{
+  opacity: 0.4;
+  z-index: 3;
+}
+#dante-model-back img{
+  width: 60%;
+}
