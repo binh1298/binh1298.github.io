@@ -4,17 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/dante.css">
   <script src="js/main.js"></script>
+  <script src="js/dante.js"></script>
   <title>Document</title>
 </head>
-<body onload="pauseIntro()">
+<body onload="pauseIntro();">
+  <div class="nav-bar">
+    <ul>
+      <li>HOME</li>
+      <li>DANTE</li>
+      <li>DANTE'S WEAPONS</li>
+      <li>NERO</li>
+      <li>NERO'S WEAPONS</li>
+      <li>OTHERS</li>
+      <li>BUY THIS GAME</li>
+    </ul>
+  </div>
   <div class="bg-container">
-    <video id="introVid" autoplay muted loop onclick="showLandingPage()">
-      <source src="resources/video/DMC4SE_Intro_Vergil.mp4" type="video/mp4">
-      Your browser does not support HTML5 video.
-    </video>
+    
     <div class="father-half-container" onmouseover="changeHalfsSizes(this, event)" onmouseout="resetDefaultHalfsSizes()" id="halfs-container">
+      <video id="introVid" autoplay muted loop onclick="showLandingPage()">
+        <source src="resources/video/DMC4SE_Intro_Vergil.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
       <div id="dante-container">
         <div class="grid-half-container hc-left">
           <div>
@@ -35,6 +50,18 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+  <div class="section-container grid-dante-section">
+    <div class="model-container">
+      <div class="model" id="dante-model-back">
+        <img src="resources/images/dante_section/D_devil_form.png" onclick="switchCharacterDante()" alt="">
+      </div>
+      <div class="model" id="dante-model-front">
+        <img src="resources/images/dante_section/D_human_form.png" onclick="switchCharacterDante()" alt="">
+      </div>
+    </div>
+    <div>
     </div>
   </div>
 </body>
