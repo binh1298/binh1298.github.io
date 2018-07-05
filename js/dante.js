@@ -23,3 +23,12 @@ function switchCharacterDante(){
     }, 500);
   }, 400)
 }
+var currentDanteCarouselPos = 0;
+function changeCarouselDante(direction)
+{
+  currentDanteCarouselPos = (currentDanteCarouselPos + direction)%4;
+  if(currentDanteCarouselPos < 0) currentDanteCarouselPos = 3;
+  var carouselGrid = document.getElementById("dante-video-carousel");
+  carouselGrid.style.transform = "translateX(-"+ currentDanteCarouselPos * 100 + "%)";
+  carouselGrid.children[currentDanteCarouselPos].currentTime = "0";
+}
