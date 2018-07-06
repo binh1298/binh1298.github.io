@@ -8,11 +8,13 @@
   <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed|Roboto+Condensed" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/dante.css">
-  <script src="js/main.js"></script>
-  <script src="js/dante.js"></script>
+  <link rel="stylesheet" href="css/dante_weapons.css">
+  <script src="js/weapons.js"></script>
+  <!-- <script src="js/main.js"></script>
+  <script src="js/dante.js"></script> -->
   <title>Document</title>
 </head>
-<body onload="pauseIntro();">
+<body onload="pauseIntro();setDefaultHud()">
   <div class="nav-bar">
     <ul>
       <li>HOME</li>
@@ -91,6 +93,30 @@
         </p>
       </div>
       <img src="resources/images/Arrow_right.png" alt="" class="carousel-btn" onclick="changeCarouselDante(1)">
+    </div>
+  </div>
+  <div class="dante-art-work-section">
+    <div class="art-work-cinema">
+      <div class="dante-art-work-container" id="art-work-gun">
+        <img src="resources/images/devil_arms/art_work/ivory_ebony.jpg" alt="" id="art-work-gun-1">
+        <img src="resources/images/devil_arms/art_work/pandora.jpg" alt="" id="art-work-gun-2">
+        <img src="resources/images/devil_arms/art_work/shotgun_v2.png" alt="" id="art-work-gun-3">
+      </div> 
+      <div class="dante-art-work-container" id="art-work-arm">
+        <img src="resources/images/devil_arms/art_work/rebellion.jpg" alt="" id="art-work-arm-1">
+        <img src="resources/images/devil_arms/art_work/gilgamesh.jpg" alt="" id="art-work-arm-2">
+        <img src="resources/images/devil_arms/art_work/lucifer.png" alt="" id="art-work-arm-3">
+      </div> 
+    </div>
+    <div class="hud-weapon-container" id="hud-gun-container" onclick="changeWeaponHudClockwise(this)">
+      <img src="resources/images/devil_arms/transparent/hud_ebony_ivory.png" alt="" id="gun-hud-1">
+      <img src="resources/images/devil_arms/transparent/hud_pandora.png" alt="" id="gun-hud-2">
+      <img src="resources/images/devil_arms/transparent/hud_shortgun.png" alt="" id="gun-hud-3">
+    </div>
+    <div class="hud-weapon-container" id="hud-arm-container" onclick="changeWeaponHudCounterClockwise(this)">
+      <img src="resources/images/devil_arms/transparent/hud_rebellion.png" alt="" id="arm-hud-1">
+      <img src="resources/images/devil_arms/transparent/hud_gilgamesh.png" alt="" id="arm-hud-2">
+      <img src="resources/images/devil_arms/transparent/hud_lucifer.png" alt="" id="arm-hud-3">
     </div>
   </div>
 </body>
