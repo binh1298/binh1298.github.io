@@ -1,15 +1,38 @@
 .dante-art-work-section{
-  background-size: cover;
   height: 100vh;
   max-height: 100vh;
   position: relative;
   overflow: hidden;
 }
+.art-work-cinema{
+  width: 100%;
+  padding: 0 15%;
+}
 .hud-weapon-container{
   position: relative;
+  z-index: 4;
 }
 .hud-weapon-container:hover{
   cursor: pointer;
+}
+.hud-weapon-container:hover span{
+  opacity: 1;
+  background-color: rgb(90, 90, 90);
+  box-shadow: 0 0 0 2px rgb(70, 70, 70);
+}
+.hud-weapon-container span{
+  min-width: 4vw;
+  min-height: 4vw;
+  width: 16vw;
+  height: 16vw;
+  display: inline-block;
+  overflow: hidden;
+  transition: 0.3s;
+  opacity: 0.8;
+  background-color: rgba(68, 68, 68, 0.664);
+  box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  transform: translateX(-22%) translateY(-33%);
 }
 .hud-weapon-container img{
   position: absolute;
@@ -17,32 +40,35 @@
 }
 #hud-gun-container{
   position: absolute;
-  bottom: 20%;
+  bottom: -10%;
   left: 10%;
 }
 #hud-arm-container{
   position: absolute;
-  bottom: 20%;
-  right: 20%;
+  bottom: -10%;
+  right: 3%;
 }
 #gun-hud-1, #arm-hud-1{
   transform: translateY(-50%) scale(1.2);
-  z-index: 3;
+  z-index: 5;
 }
 #gun-hud-2, #arm-hud-2{
   transform: translate(50%) scale(0.9);
   opacity: 0.8;
-  z-index: 2;
+  z-index: 4;
 }
 #gun-hud-3, #arm-hud-3{
   transform: translate(-50%) scale(0.9);
   opacity: 0.8;
-  z-index: 2;
+  z-index: 4;
+}
+.dante-art-work-container{
+  position: relative;
 }
 .dante-art-work-container img{
   position: absolute;
   transition: 0.5s all;
-  width: 100%;
+  width: 70%;
 }
 #art-work-gun{
   transition: 0.6s all;
