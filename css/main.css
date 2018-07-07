@@ -77,9 +77,12 @@ video{
 }
 .bg-container{
   width: 100vw;
-  max-height: 100vh;
-  overflow: hidden;
   position: relative;
+}
+.description-box{
+  background-image: url("../resources/images/words/light-red-p-container.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .bg-container img{
   width: 100%;
@@ -125,7 +128,6 @@ video{
   position: relative;
   right: 50vw;
 }
-
 .section-container{
   width: 100%;
 }

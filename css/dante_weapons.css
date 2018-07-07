@@ -1,10 +1,12 @@
-.dante-art-work-section{
+.dante-action-section{
+  background-image: url("../resources/images/dante_section/red-bg.jpg");
+  background-size: cover;
   height: 100vh;
   max-height: 100vh;
   position: relative;
   overflow: hidden;
 }
-.art-work-cinema{
+.dante-action-cinema{
   width: 100%;
   padding: 0 15%;
 }
@@ -62,33 +64,38 @@
   opacity: 0.8;
   z-index: 4;
 }
-.dante-art-work-container{
+.dante-action-container{
   position: relative;
 }
-.dante-art-work-container img{
+.dante-action-container img{
   position: absolute;
   transition: 0.5s all;
   width: 70%;
 }
-#art-work-gun{
+.dante-action-container video{
+  position: absolute;
+  transition: 0.5s all;
+  width: 70%;
+}
+#dante-action-gun{
   transition: 0.6s all;
   z-index: 1;
   opacity: 0;
 }
-#art-work-arm{
+#dante-action-arm{
   transition: 0.6s all;
   z-index: 2;
   opacity: 1;
 }
 
-#art-work-gun-1, #art-work-arm-1{
+#dante-action-gun-1, #dante-action-arm-1{
   transform: translateX(0);
 }
-#art-work-gun-2, #art-work-arm-2{
+#dante-action-gun-2, #dante-action-arm-2{
   transform: translateX(100%);  
   opacity: 0;
 }
-#art-work-gun-3, #art-work-arm-3{
+#dante-action-gun-3, #dante-action-arm-3{
   transform: translateX(-100%);
   opacity: 0;
 }

@@ -4,30 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed" rel="stylesheet"> -->
-  <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed|Roboto+Condensed" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed|Noto+Serif|Roboto+Condensed" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/introduction.css">
   <link rel="stylesheet" href="css/dante.css">
   <link rel="stylesheet" href="css/dante_weapons.css">
   <script src="js/weapons.js"></script>
-  <!-- <script src="js/main.js"></script>
-  <script src="js/dante.js"></script> -->
+  <script src="js/main.js"></script>
+  <script src="js/dante.js"></script>
   <title>Document</title>
 </head>
 <body onload="pauseIntro();setDefaultHud()">
   <div class="nav-bar">
     <ul>
       <li>HOME</li>
+      <li>INTRODUCTION</li>
       <li>DANTE</li>
       <li>DANTE'S WEAPONS</li>
       <li>NERO</li>
-      <li>NERO'S WEAPONS</li>
       <li>OTHERS</li>
       <li>BUY THIS GAME</li>
     </ul>
   </div>
   <div class="bg-container">
-    
     <div class="father-half-container" onmouseover="changeHalfsSizes(this, event)" onmouseout="resetDefaultHalfsSizes()" id="halfs-container">
       <video id="introVid" autoplay muted loop onclick="showLandingPage()">
         <source src="resources/video/DMC4SE_Intro_Vergil.mp4" type="video/mp4">
@@ -55,6 +54,26 @@
       </div>
     </div>
   </div>
+
+  <div class="introduction-section">
+      <!-- 
+      Adding top/left of 50% moves the top/left margin edge of the element to the middle of the parent
+      and translate() function with the (negative) value of -50% moves the element by the half of its size.
+      Hence the element will be positioned at the middle.
+      -->
+    <div style="position: absolute; top: 2%; left: 50%; transform: translate(-50%, -50%);; margin: 2% auto">
+      <img src="resources/images/words/the_origin.png" alt="" style="display:block; margin: 0 auto;">
+      <img src="resources/images/horizontal_bar.png" alt="" style="display:block; margin: 0 auto; width: 30%">
+    </div>
+    <img src="resources/images/introduction/Dante-vs-Nero-cropped.png" alt="" width="100%">
+    <div class="description-box" id="intro-p-1">
+      <p>Devil May Cry® 4 immerses gamers in a gothic supernatural world, where a new protagonist clashes with a familiar hero. As the new leading man, Nero, players will unleash incredible attacks and non-stop combos using a unique new gameplay mechanic, his powerful "Devil Bringer" arm. </p>
+    </div>
+    <div class="description-box" id="intro-p-2">
+      <p>With the advanced graphical capabilities of the PC, high definition visuals and intricate detail come to life as players explore new and exotic locales. Dynamic action and undeniable style combine with explosive fighting options and a gripping story to produce the incomparable experience that only a Devil May Cry game can deliver.</p>
+    </div>
+  </div>
+
   <div class="section-container grid-dante-section">
     <div class="model-container flex-box">
       <div class="model" id="dante-model-back">
@@ -65,51 +84,59 @@
       </div>
     </div>
     <div class="flex-carousel-container">
-      <img src="resources/images/Arrow_left.png" alt="" class="carousel-btn" onclick="changeCarouselDante(-1)">
       <div>
-        <h3>Melee Combat</h3>
-        <div class="carousel-video-container">
-          <div class="carousel-grid" id="dante-video-carousel">
-            <video autoplay muted loop style="width: 100%">
-              <source src="resources/video/Dante/1.mp4" type="video/mp4">
-              Your browser does not support HTML5 video.
-            </video>
-            <video autoplay muted loop style="width: 100%">
-              <source src="resources/video/Dante/2.mp4" type="video/mp4">
-              Your browser does not support HTML5 video.
-            </video>
-            <video autoplay muted loop style="width: 100%">
-              <source src="resources/video/Dante/3.mp4" type="video/mp4">
-              Your browser does not support HTML5 video.
-            </video>
-            <video autoplay muted loop style="width: 100%">
-              <source src="resources/video/Dante/4.mp4" type="video/mp4">
-              Your browser does not support HTML5 video.
-            </video>
-          </div>
+        <div style="margin: 5% 0">
+          <img src="resources/images/words/son_of_sparda.png" alt="" style="display:block; margin: 0 auto;">
+          <img src="resources/images/horizontal_bar.png" alt="" style="display:block; margin: 0 auto; width: 35%">
         </div>
-        <p>
-          Dante has a specific sets of skills that strikes fear to devils' hearts
-        </p>
+        <div class="flex-box">
+          <img src="resources/images/Arrow_left.png" alt="" class="carousel-btn" onclick="changeCarouselDante(-1)">
+          <div class="carousel-video-container">
+            <div class="carousel-grid" id="dante-video-carousel">
+              <img src="resources/images/devil_arms/art_work/ivory_ebony.jpg" alt="" id="">
+              <img src="resources/images/devil_arms/art_work/pandora.jpg" alt="" id="">
+              <img src="resources/images/devil_arms/art_work/shotgun_v2.png" alt="" id="">
+              <img src="resources/images/devil_arms/art_work/rebellion.jpg" alt="" id="">
+              <img src="resources/images/devil_arms/art_work/gilgamesh.jpg" alt="" id="">
+              <img src="resources/images/devil_arms/art_work/lucifer.png" alt="" id="">
+            </div>
+          </div>
+          <img src="resources/images/Arrow_right.png" alt="" class="carousel-btn" onclick="changeCarouselDante(1)">
+        </div>
+        <div class="description-box" id="dante-description">
+          <p>Dante is a paranormal mercenary, private investigator and vigilante Devil Hunter dedicated to exterminating evil demons and other malevolent supernatural forces</p>
+        </div>
       </div>
-      <img src="resources/images/Arrow_right.png" alt="" class="carousel-btn" onclick="changeCarouselDante(1)">
     </div>
   </div>
-  <div class="dante-art-work-section">
+  <div class="dante-action-section">
     <div style="margin: 2% auto">
-      <img src="resources/images/words/theater.png" alt="" style="display:block; margin: 0 auto;">
-      <img src="resources/images/horizontal_bar.png" alt="" style="display:block; margin: 0 auto; width: 15%">
+      <img src="resources/images/words/dantes_action.png" alt="" style="display:block; margin: 0 auto;">
+      <img src="resources/images/horizontal_bar.png" alt="" style="display:block; margin: 0 auto; width: 20%">
     </div>
-    <div class="art-work-cinema">
-      <div class="dante-art-work-container" id="art-work-gun">
-        <img src="resources/images/devil_arms/art_work/ivory_ebony.jpg" alt="" id="art-work-gun-1">
-        <img src="resources/images/devil_arms/art_work/pandora.jpg" alt="" id="art-work-gun-2">
-        <img src="resources/images/devil_arms/art_work/shotgun_v2.png" alt="" id="art-work-gun-3">
+    <div class="dante-action-cinema">
+      <div class="dante-action-container" id="dante-action-gun">
+        <img src="resources/images/devil_arms/art_work/ivory_ebony.jpg" alt="" id="dante-action-gun-1">
+        <img src="resources/images/devil_arms/art_work/pandora.jpg" alt="" id="dante-action-gun-2">
+        <img src="resources/images/devil_arms/art_work/shotgun_v2.png" alt="" id="dante-action-gun-3">
       </div> 
-      <div class="dante-art-work-container" id="art-work-arm">
-        <img src="resources/images/devil_arms/art_work/rebellion.jpg" alt="" id="art-work-arm-1">
-        <img src="resources/images/devil_arms/art_work/gilgamesh.jpg" alt="" id="art-work-arm-2">
-        <img src="resources/images/devil_arms/art_work/lucifer.png" alt="" id="art-work-arm-3">
+      <div class="dante-action-container" id="dante-action-arm">
+        <video autoplay muted loop id="dante-action-arm-1">
+          <source src="resources/video/Dante/1.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+        <video autoplay muted loop id="dante-action-arm-2">
+          <source src="resources/video/Dante/3.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+        <video autoplay muted loop id="dante-action-arm-3">
+          <source src="resources/video/Dante/4.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+           <!--   <video autoplay muted loop style="width: 100%">
+                <source src="resources/video/Dante/4.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+              </video> -->
       </div> 
     </div>
     <div class="hud-weapon-container" id="hud-gun-container" onclick="changeWeaponHudClockwise(this)">

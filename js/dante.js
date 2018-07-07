@@ -26,9 +26,8 @@ function switchCharacterDante(){
 var currentDanteCarouselPos = 0;
 function changeCarouselDante(direction)
 {
-  currentDanteCarouselPos = (currentDanteCarouselPos + direction)%4;
-  if(currentDanteCarouselPos < 0) currentDanteCarouselPos = 3;
   var carouselGrid = document.getElementById("dante-video-carousel");
+  currentDanteCarouselPos = (currentDanteCarouselPos + direction)%carouselGrid.children.length;
+  if(currentDanteCarouselPos < 0) currentDanteCarouselPos = 3;
   carouselGrid.style.transform = "translateX(-"+ currentDanteCarouselPos * 100 + "%)";
-  carouselGrid.children[currentDanteCarouselPos].currentTime = "0";
 }

@@ -1,11 +1,11 @@
 var currentArtWorkPos = [0, 0];
 function switchArtWork(awf, awb){
-  containerArtWork1 = document.getElementById(awf);
-  containerArtWork2 = document.getElementById(awb);
-  containerArtWork1.style.zIndex = 2;
-  containerArtWork1.style.opacity = 1;
-  containerArtWork2.style.zIndex = 1;
-  containerArtWork2.style.opacity = 0;
+  containerDanteAction1 = document.getElementById(awf);
+  containerDanteAction2 = document.getElementById(awb);
+  containerDanteAction1.style.zIndex = 2;
+  containerDanteAction1.style.opacity = 1;
+  containerDanteAction2.style.zIndex = 1;
+  containerDanteAction2.style.opacity = 0;
 }
 function changeWeaponHudClockwise(obj){
   containerHUD = obj.children;
@@ -14,12 +14,12 @@ function changeWeaponHudClockwise(obj){
   containerHUD[1].id = containerHUD[2].id;
   containerHUD[2].id = temp;
 
-  containerArtWork = document.getElementById("art-work-gun").children;
-  switchArtWork("art-work-gun", "art-work-arm");
-  temp = containerArtWork[0].id;
-  containerArtWork[0].id = containerArtWork[1].id;
-  containerArtWork[1].id = containerArtWork[2].id;
-  containerArtWork[2].id = temp;
+  containerDanteAction = document.getElementById("dante-action-gun").children;
+  switchArtWork("dante-action-gun", "dante-action-arm");
+  temp = containerDanteAction[0].id;
+  containerDanteAction[0].id = containerDanteAction[1].id;
+  containerDanteAction[1].id = containerDanteAction[2].id;
+  containerDanteAction[2].id = temp;
 }
 function changeWeaponHudCounterClockwise(obj){
   containerHUD = obj.children;
@@ -28,10 +28,13 @@ function changeWeaponHudCounterClockwise(obj){
   containerHUD[2].id = containerHUD[1].id;
   containerHUD[1].id = temp;
 
-  containerArtWork = document.getElementById("art-work-arm").children;
-  switchArtWork("art-work-arm", "art-work-gun");
-  temp = containerArtWork[0].id;
-  containerArtWork[0].id = containerArtWork[2].id;
-  containerArtWork[2].id = containerArtWork[1].id;
-  containerArtWork[1].id = temp;
+  containerDanteAction = document.getElementById("dante-action-arm").children;
+  switchArtWork("dante-action-arm", "dante-action-gun");
+  temp = containerDanteAction[0].id;
+  containerDanteAction[0].id = containerDanteAction[2].id;
+  containerDanteAction[2].id = containerDanteAction[1].id;
+  containerDanteAction[1].id = temp;
+  containerDanteAction[0].currentTime = "0";
+  containerDanteAction[1].currentTime = "0";
+  containerDanteAction[2].currentTime = "0";
 }

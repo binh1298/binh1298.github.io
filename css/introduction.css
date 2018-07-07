@@ -1,0 +1,24 @@
+.introduction-section{
+  background-image: url("../resources/images/introduction/overlaybg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+#intro-p-1, #intro-p-2{
+  position: absolute;
+  width: 40%;
+  margin-left: 5%;
+}
+#intro-p-1 p, #intro-p-2 p{
+  font-family: 'Noto Serif', serif;
+  color: rgb(214, 214, 214);
+  font-size: 0.9em;
+  margin: 10%;
+}
+#intro-p-1{
+  top: 10%;
+}
+#intro-p-2{
+  bottom: 5%;
+  right: 0;
+}

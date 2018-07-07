@@ -27,19 +27,6 @@
   padding: 0 5%;
   display: flex;
   align-items: center;
-  text-align: center;
-}
-.flex-carousel-container h3{
-  font-family: 'Encode Sans Condensed', sans-serif;
-  font-size: 1.5em;
-  color: rgb(134, 134, 134);
-}
-.flex-carousel-container p{
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 1.2em;
-  font-weight: bold;
-  color: rgb(185, 185, 185);
-  margin: 5% 20% 15%;
 }
 .carousel-video-container{
   margin: 0 5%;
@@ -55,6 +42,19 @@
 }
 .carousel-grid{
   display: grid;
-  grid-template-columns: 100% 100% 100% 100%;
+  grid-template-columns: 100% 100% 100% 100% 100% 100%;
   transition: 0.5s all;
+}
+.carousel-grid img{
+  width: 100%;
+}
+#dante-description{
+  padding: 10%;
+  margin: 0 10%;
+}
+#dante-description p{
+  font-family: 'Noto Serif', serif;
+  color: rgb(214, 214, 214);
+  font-size: 0.9em;
+  margin: 0;
 }
