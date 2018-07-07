@@ -81,8 +81,13 @@ video{
 }
 .description-box{
   background-image: url("../resources/images/words/light-red-p-container.png");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
+}
+.description-box p{
+  font-family: 'Noto Serif', serif;
+  color: rgb(214, 214, 214);
+  font-size: 1em;
 }
 .bg-container img{
   width: 100%;

@@ -10,15 +10,12 @@
   margin-left: 5%;
 }
 #intro-p-1 p, #intro-p-2 p{
-  font-family: 'Noto Serif', serif;
-  color: rgb(214, 214, 214);
-  font-size: 0.9em;
-  margin: 10%;
+  margin: 10% 8% 10% 10%;
 }
 #intro-p-1{
   top: 10%;
 }
 #intro-p-2{
   bottom: 5%;
-  right: 0;
+  right: 2%;
 }

@@ -17,11 +17,6 @@
 .hud-weapon-container:hover{
   cursor: pointer;
 }
-.hud-weapon-container:hover span{
-  opacity: 1;
-  background-color: rgb(90, 90, 90);
-  box-shadow: 0 0 0 2px rgb(70, 70, 70);
-}
 .hud-weapon-container span{
   min-width: 4vw;
   min-height: 4vw;
@@ -31,10 +26,15 @@
   overflow: hidden;
   transition: 0.3s;
   opacity: 0.8;
-  background-color: rgba(68, 68, 68, 0.664);
-  box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.5);
+  background-color: rgba(0,0,0, 0);
+  box-shadow: 0 0 0 3px rgb(66, 66, 66);
   border-radius: 50%;
-  transform: translateX(-22%) translateY(-33%);
+  transform: translateX(-19%) translateY(-33%);
+}
+.hud-weapon-container:hover span{
+  opacity: 1;
+  background-color: rgba(83, 83, 83, 0.39);
+  box-shadow: 0 0 0 3px rgb(0, 0, 0);
 }
 .hud-weapon-container img{
   position: absolute;
@@ -50,6 +50,22 @@
   bottom: -10%;
   right: 3%;
 }
+/* This makes it looks like the original
+#gun-hud-1, #arm-hud-1{
+  transform: translateY(-50%) scale(1.2);
+  z-index: 5;
+}
+#gun-hud-2, #arm-hud-2{
+  transform: translateX(30%) translateY(-20%) scale(0.9);
+  opacity: 0.8;
+  z-index: 4;
+}
+#gun-hud-3, #arm-hud-3{
+  transform: translate(50%) scale(0.9);
+  opacity: 0.8;
+  z-index: 3;
+} */
+/* But I like this one better, also it works with the span thing */
 #gun-hud-1, #arm-hud-1{
   transform: translateY(-50%) scale(1.2);
   z-index: 5;
@@ -62,7 +78,7 @@
 #gun-hud-3, #arm-hud-3{
   transform: translate(-50%) scale(0.9);
   opacity: 0.8;
-  z-index: 4;
+  z-index: 3;
 }
 .dante-action-container{
   position: relative;
