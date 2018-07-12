@@ -9,12 +9,18 @@
   <link rel="stylesheet" href="css/introduction.css">
   <link rel="stylesheet" href="css/dante.css">
   <link rel="stylesheet" href="css/dante_weapons.css">
+  <link rel="stylesheet" href="css/nero.css">
+  <link rel="stylesheet" href="css/others_characters.css">
+  <link rel="stylesheet" href="css/buy_this_game.css">
+  <link rel="stylesheet" href="css/responsive.css">
   <script src="js/weapons.js"></script>
   <script src="js/main.js"></script>
   <script src="js/dante.js"></script>
+  <script src="js/nero.js"></script>
+  <script src="js/others.js"></script>
   <title>Devil May Cry 4: Special Edition</title>
 </head>
-<body onload="pauseIntro();setDefaultHud()">
+<body onload="pauseIntro();changeCarouselNero()">
   <div class="nav-bar">
     <ul>
       <li>HOME</li>
@@ -95,7 +101,6 @@
             <div class="carousel-grid" id="dante-video-carousel">
               <img src="resources/images/devil_arms/art_work/ivory_ebony.jpg" alt="" id="">
               <img src="resources/images/devil_arms/art_work/pandora.jpg" alt="" id="">
-              <img src="resources/images/devil_arms/art_work/shotgun_v2.png" alt="" id="">
               <img src="resources/images/devil_arms/art_work/rebellion.jpg" alt="" id="">
               <img src="resources/images/devil_arms/art_work/gilgamesh.jpg" alt="" id="">
               <img src="resources/images/devil_arms/art_work/lucifer.png" alt="" id="">
@@ -152,6 +157,59 @@
       <img src="resources/images/devil_arms/transparent/hud_lucifer.png" alt="" id="arm-hud-3">
       <span style="opacity: 0;"></span>
     </div>
+  </div>
+  <div class="section-container grid-nero-section">
+    <div class="flex-carousel-container">
+      <div>
+        <div style="margin: 5% 0">
+          <img src="resources/images/words/neros_action.png" alt="" style="display:block; margin: 0 auto;">
+          <img src="resources/images/horizontal_bar.png" alt="" style="display:block; margin: 0 auto; width: 35%">
+        </div>
+        <div class="flex-box">
+          <div class="carousel-video-container">
+            <div class="carousel-grid" id="nero-video-carousel">
+              <img src="resources/images/devil_arms/art_work/ivory_ebony.jpg" alt="" id="">
+              <img src="resources/images/devil_arms/art_work/pandora.jpg" alt="" id="">
+              <img src="resources/images/devil_arms/art_work/lucifer.png" alt="" id="">
+            </div>
+          </div>
+        </div>
+        <div class="description-box" id="dante-description">
+          <p>Nero is the son of Vergil who is raised in Fortuna and serves as a Holy Knight in a religious group that worships Sparda and fights to protect the world from demons.</p>
+        </div>
+      </div>
+    </div>
+    <div class="model-container flex-box">
+      <div class="model" id="nero-model-back">
+        <img src="resources/images/nero_section/N_devil_form2.png" onclick="switchCharacterNero()" alt="">
+      </div>
+      <div class="model" id="nero-model-front">
+        <img src="resources/images/nero_section/N_human_form.png" onclick="switchCharacterNero()" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="section-container grid-others-section">
+    <div class="model-container">
+      <div class="model" id="marry-model">
+        <img src="resources/images/others/mary_model_resized.png" alt="" onclick="changeOthersDescription(0)">
+      </div>
+    </div>
+    <div class="model-container">
+      <div class="model" id="vergil-model">
+        <img src="resources/images/others/vergil_model_resized.png" alt="" onclick="changeOthersDescription(1)">
+      </div>
+    </div>
+    <div class="model-container">
+      <div class="model" id="trish-model">
+        <img src="resources/images/others/trish_model.png" alt="" onclick="changeOthersDescription(2)">
+      </div>
+    </div>
+    <div class="description-box" id="others-description">
+      <p id="0">Mary is a human Devil Hunter who first appeared in Devil May Cry 3: Dante's Awakening as both a supporting character and boss. She is the daughter of Arkham and sought to hunt him down, encountering Dante in the process. After the events, she joins Devil May Cry.</p>
+    </div>
+  </div>
+  <div class="shopping-section">
+    <img src="resources/images/buy_this_game/dante_vs_nero_gun.png" alt="" width="100%">
   </div>
 </body>
 </html>

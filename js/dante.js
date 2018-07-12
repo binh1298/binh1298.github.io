@@ -4,8 +4,8 @@ function switchCharacterDante(){
   switchingModel = true;
   var x = document.getElementById("dante-model-back");
   var y = document.getElementById("dante-model-front");
-  x.style.transform = "translateX(30%)";
-  y.style.transform = "translateX(-30%)";
+  x.style.transform = "translateX(-20%)";
+  y.style.transform = "translateX(-80%)";
   x.style.opacity = "1";
   y.style.opacity = "0.4";
   function switchID(){
@@ -15,8 +15,8 @@ function switchCharacterDante(){
 
   }
   setTimeout(function(){
-    x.style.transform = "translateX(0)";
-    y.style.transform = "translateX(0)";
+    x.style.transform = "translateX(-50%)";
+    y.style.transform = "translateX(-50%)";
     switchID();
     setTimeout(function(){
       switchingModel = false;

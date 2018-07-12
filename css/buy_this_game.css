@@ -1,0 +1,7 @@
+.shopping-section{
+  background-image: url("../resources/images/introduction/overlaybg_flipped.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-height: 100vh;
+  overflow: hidden;
+}

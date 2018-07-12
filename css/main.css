@@ -5,6 +5,9 @@ html, body{
   background-color: black;
   overflow-x: hidden;
 }
+body{
+  overflow: hidden;
+}
 /* width */
 ::-webkit-scrollbar {
   width: 5px;
@@ -43,6 +46,7 @@ html, body{
   content: "";  
   background-image: url("../resources/images/nav-bar.png");
   background-size: cover;
+  background-repeat: no-repeat;
   opacity: 0.8;
   top: 0;
   left: 0;
@@ -148,7 +152,10 @@ video{
   transition: 0.5s all;
 }
 .model{
+  width: 100%;
   position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .model img:hover{  
   cursor: pointer;

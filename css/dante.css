@@ -4,18 +4,18 @@
   display: grid;
   grid-template-columns: 50% 50%;
 }
-#dante-model-front{
+#dante-model-front, #nero-model-front{
   z-index: 4;
 }
-#dante-model-front img{
+#dante-model-front img, #nero-model-front img{
   margin-left: 20%;
   width: 90%;
 }
-#dante-model-back{
+#dante-model-back, #nero-model-back{
   opacity: 0.4;
   z-index: 3;
 }
-#dante-model-back img{
+#dante-model-back img, #nero-model-back img{
   width: 80%;
 }
 .flex-box{

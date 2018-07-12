@@ -1,0 +1,12 @@
+.grid-nero-section{
+  background-image: url("../resources/images/dante_section/blue-bg.jpg");
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+#nero-model-front img{
+  margin-left: 0;
+}
+#nero-model-back img{
+  margin-left: 20%;
+}
