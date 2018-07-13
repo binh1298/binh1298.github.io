@@ -1,6 +1,6 @@
 .grid-others-section{
-  background-image: url("../resources/images/dante_section/blue-bg.jpg");
-  background-size: cover;
+  background-image: url("../resources/images/bgs/b12.png");
+  background-size: contain;
   display: grid;
   grid-template-columns: 33.33% 33.33% 33.33%;
   position: relative;
@@ -12,6 +12,7 @@
 #others-description{
   width: 40%;
   position: absolute;
+  z-index: 2;
   left: 50%;
   bottom: 10%;
   transform: translateX(-50%);
@@ -28,4 +29,8 @@
 #others-description-1, #others-description-2{
   opacity: 0;
   display: none;
+}
+#marry-model, #vergil-model, #trish-model{
+  display: block;
+  margin: 0 auto;  
 }

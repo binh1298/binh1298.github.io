@@ -1,6 +1,6 @@
 @media only screen and (max-width: 1024px) {
   body{
-    font-size: 26px;
+    font-size: 2.55vw;
   }
   .nav-bar{
     width: 90%;
@@ -19,10 +19,11 @@
   #intro-p-1 p, #intro-p-2 p{
     margin-right: 12%;
   }
-  .grid-dante-section, .grid-nero-section{
+  .grid-dante-section, .grid-nero-section, .grid-others-section{
     display: block;
   }
   .model-container{
+    min-height: 1200px;
     height: 70vh;
   }
   #dante-model-front img, #nero-model-front img{
@@ -40,5 +41,20 @@
   }
   #hud-arm-container{
     right: 6%;
+  }
+  .grid-others-section .model-container{
+    width: 100%;
+  }
+  #others-description{
+    position: sticky;
+    transform: translate(0, 0);
+    left: 0;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .product-container{
+    margin-left: 55%;
+    width: 25%;
+    padding: 2% 10%;
   }
 }

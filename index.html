@@ -12,12 +12,14 @@
   <link rel="stylesheet" href="css/nero.css">
   <link rel="stylesheet" href="css/others_characters.css">
   <link rel="stylesheet" href="css/buy_this_game.css">
+  <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/responsive.css">
-  <script src="js/weapons.js"></script>
+  <!-- <script src="js/weapons.js"></script>
   <script src="js/main.js"></script>
   <script src="js/dante.js"></script>
   <script src="js/nero.js"></script>
-  <script src="js/others.js"></script>
+  <script src="js/others.js"></script> -->
+  <script src="js/shop.js"></script>
   <title>Devil May Cry 4: Special Edition</title>
 </head>
 <body onload="pauseIntro();changeCarouselNero()">
@@ -79,83 +81,84 @@
       <p>With the advanced graphical capabilities of the PC, high definition visuals and intricate detail come to life as players explore new and exotic locales. Dynamic action and undeniable style combine with explosive fighting options and a gripping story to produce the incomparable experience that only a Devil May Cry game can deliver.</p>
     </div>
   </div>
-
-  <div class="section-container grid-dante-section">
-    <div class="model-container flex-box">
-      <div class="model" id="dante-model-back">
-        <img src="resources/images/dante_section/D_devil_form.png" onclick="switchCharacterDante()" alt="">
-      </div>
-      <div class="model" id="dante-model-front">
-        <img src="resources/images/dante_section/D_human_form.png" onclick="switchCharacterDante()" alt="">
-      </div>
-    </div>
-    <div class="flex-carousel-container">
-      <div>
-        <div style="margin: 5% 0">
-          <img src="resources/images/words/son_of_sparda.png" alt="" style="display:block; margin: 0 auto;">
-          <img src="resources/images/horizontal_bar.png" alt="" style="display:block; margin: 0 auto; width: 35%">
+  <div>
+    <div class="section-container grid-dante-section">
+      <div class="model-container flex-box">
+        <div class="model" id="dante-model-back">
+          <img src="resources/images/dante_section/D_devil_form.png" onclick="switchCharacterDante()" alt="">
         </div>
-        <div class="flex-box">
-          <img src="resources/images/Arrow_left.png" alt="" class="carousel-btn" onclick="changeCarouselDante(-1)">
-          <div class="carousel-video-container">
-            <div class="carousel-grid" id="dante-video-carousel">
-              <img src="resources/images/devil_arms/art_work/ivory_ebony.jpg" alt="" id="">
-              <img src="resources/images/devil_arms/art_work/pandora.jpg" alt="" id="">
-              <img src="resources/images/devil_arms/art_work/rebellion.jpg" alt="" id="">
-              <img src="resources/images/devil_arms/art_work/gilgamesh.jpg" alt="" id="">
-              <img src="resources/images/devil_arms/art_work/lucifer.png" alt="" id="">
-            </div>
+        <div class="model" id="dante-model-front">
+          <img src="resources/images/dante_section/D_human_form.png" onclick="switchCharacterDante()" alt="">
+        </div>
+      </div>
+      <div class="flex-carousel-container">
+        <div>
+          <div style="margin: 5% 0">
+            <img src="resources/images/words/son_of_sparda.png" alt="" style="display:block; margin: 0 auto;">
+            <img src="resources/images/horizontal_bar.png" alt="" style="display:block; margin: 0 auto; width: 35%">
           </div>
-          <img src="resources/images/Arrow_right.png" alt="" class="carousel-btn" onclick="changeCarouselDante(1)">
-        </div>
-        <div class="description-box" id="dante-description">
-          <p>Dante is a paranormal mercenary, private investigator and vigilante Devil Hunter dedicated to exterminating evil demons and other malevolent supernatural forces</p>
+          <div class="flex-box">
+            <img src="resources/images/Arrow_left.png" alt="" class="carousel-btn" onclick="changeCarouselDante(-1)">
+            <div class="carousel-video-container">
+              <div class="carousel-grid" id="dante-video-carousel">
+                <img src="resources/images/devil_arms/art_work/ivory_ebony.jpg" alt="" id="">
+                <img src="resources/images/devil_arms/art_work/pandora.jpg" alt="" id="">
+                <img src="resources/images/devil_arms/art_work/rebellion.jpg" alt="" id="">
+                <img src="resources/images/devil_arms/art_work/gilgamesh.jpg" alt="" id="">
+                <img src="resources/images/devil_arms/art_work/lucifer.png" alt="" id="">
+              </div>
+            </div>
+            <img src="resources/images/Arrow_right.png" alt="" class="carousel-btn" onclick="changeCarouselDante(1)">
+          </div>
+          <div class="description-box" id="dante-description">
+            <p>Dante is a paranormal mercenary, private investigator and vigilante Devil Hunter dedicated to exterminating evil demons and other malevolent supernatural forces</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="dante-action-section">
-    <div style="margin: 2% auto">
-      <img src="resources/images/words/dantes_action.png" alt="" style="display:block; margin: 0 auto;">
-      <img src="resources/images/horizontal_bar.png" alt="" style="display:block; margin: 0 auto; width: 20%">
-    </div>
-    <div class="dante-action-cinema">
-      <div class="dante-action-container" id="dante-action-gun">
-        <img src="resources/images/devil_arms/art_work/ivory_ebony.jpg" alt="" id="dante-action-gun-1">
-        <img src="resources/images/devil_arms/art_work/pandora.jpg" alt="" id="dante-action-gun-2">
-        <img src="resources/images/devil_arms/art_work/shotgun_v2.png" alt="" id="dante-action-gun-3">
-      </div> 
-      <div class="dante-action-container" id="dante-action-arm">
-        <video autoplay muted loop id="dante-action-arm-1">
-          <source src="resources/video/Dante/1.mp4" type="video/mp4">
-          Your browser does not support HTML5 video.
-        </video>
-        <video autoplay muted loop id="dante-action-arm-2">
-          <source src="resources/video/Dante/3.mp4" type="video/mp4">
-          Your browser does not support HTML5 video.
-        </video>
-        <video autoplay muted loop id="dante-action-arm-3">
-          <source src="resources/video/Dante/4.mp4" type="video/mp4">
-          Your browser does not support HTML5 video.
-        </video>
-           <!--   <video autoplay muted loop style="width: 100%">
-                <source src="resources/video/Dante/4.mp4" type="video/mp4">
-                Your browser does not support HTML5 video.
-              </video> -->
-      </div> 
-    </div>
-    <div class="hud-weapon-container" id="hud-gun-container" onclick="changeWeaponHudClockwise(this)">
-      <img src="resources/images/devil_arms/transparent/hud_ebony_ivory.png" alt="" id="gun-hud-1">
-      <img src="resources/images/devil_arms/transparent/hud_pandora.png" alt="" id="gun-hud-2">
-      <img src="resources/images/devil_arms/transparent/hud_shortgun.png" alt="" id="gun-hud-3">
-      <span style="opacity: 0;"></span> 
-      <!-- TODO: beautify the span -->
-    </div>
-    <div class="hud-weapon-container" id="hud-arm-container" onclick="changeWeaponHudCounterClockwise(this)">
-      <img src="resources/images/devil_arms/transparent/hud_rebellion.png" alt="" id="arm-hud-1">
-      <img src="resources/images/devil_arms/transparent/hud_gilgamesh.png" alt="" id="arm-hud-2">
-      <img src="resources/images/devil_arms/transparent/hud_lucifer.png" alt="" id="arm-hud-3">
-      <span style="opacity: 0;"></span>
+    <div class="dante-action-section">
+      <div style="margin: 2% auto">
+        <img src="resources/images/words/dantes_action.png" alt="" style="display:block; margin: 0 auto;">
+        <img src="resources/images/horizontal_bar.png" alt="" style="display:block; margin: 0 auto; width: 20%">
+      </div>
+      <div class="dante-action-cinema">
+        <div class="dante-action-container" id="dante-action-gun">
+          <img src="resources/images/devil_arms/art_work/ivory_ebony.jpg" alt="" id="dante-action-gun-1">
+          <img src="resources/images/devil_arms/art_work/pandora.jpg" alt="" id="dante-action-gun-2">
+          <img src="resources/images/devil_arms/art_work/shotgun_v2.png" alt="" id="dante-action-gun-3">
+        </div> 
+        <div class="dante-action-container" id="dante-action-arm">
+          <video autoplay muted loop id="dante-action-arm-1">
+            <source src="resources/video/Dante/1.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+          <video autoplay muted loop id="dante-action-arm-2">
+            <source src="resources/video/Dante/3.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+          <video autoplay muted loop id="dante-action-arm-3">
+            <source src="resources/video/Dante/4.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+            <!--   <video autoplay muted loop style="width: 100%">
+                  <source src="resources/video/Dante/4.mp4" type="video/mp4">
+                  Your browser does not support HTML5 video.
+                </video> -->
+        </div> 
+      </div>
+      <div class="hud-weapon-container" id="hud-gun-container" onclick="changeWeaponHudClockwise(this)">
+        <img src="resources/images/devil_arms/transparent/hud_ebony_ivory.png" alt="" id="gun-hud-1">
+        <img src="resources/images/devil_arms/transparent/hud_pandora.png" alt="" id="gun-hud-2">
+        <img src="resources/images/devil_arms/transparent/hud_shortgun.png" alt="" id="gun-hud-3">
+        <span style="opacity: 0;"></span> 
+        <!-- TODO: beautify the span -->
+      </div>
+      <div class="hud-weapon-container" id="hud-arm-container" onclick="changeWeaponHudCounterClockwise(this)">
+        <img src="resources/images/devil_arms/transparent/hud_rebellion.png" alt="" id="arm-hud-1">
+        <img src="resources/images/devil_arms/transparent/hud_gilgamesh.png" alt="" id="arm-hud-2">
+        <img src="resources/images/devil_arms/transparent/hud_lucifer.png" alt="" id="arm-hud-3">
+        <span style="opacity: 0;"></span>
+      </div>
     </div>
   </div>
   <div class="section-container grid-nero-section">
@@ -189,27 +192,49 @@
     </div>
   </div>
   <div class="section-container grid-others-section">
-    <div class="model-container">
-      <div class="model" id="marry-model">
-        <img src="resources/images/others/mary_model_resized.png" alt="" onclick="changeOthersDescription(0)">
-      </div>
-    </div>
-    <div class="model-container">
-      <div class="model" id="vergil-model">
-        <img src="resources/images/others/vergil_model_resized.png" alt="" onclick="changeOthersDescription(1)">
-      </div>
-    </div>
-    <div class="model-container">
-      <div class="model" id="trish-model">
-        <img src="resources/images/others/trish_model.png" alt="" onclick="changeOthersDescription(2)">
-      </div>
-    </div>
     <div class="description-box" id="others-description">
-      <p id="0">Mary is a human Devil Hunter who first appeared in Devil May Cry 3: Dante's Awakening as both a supporting character and boss. She is the daughter of Arkham and sought to hunt him down, encountering Dante in the process. After the events, she joins Devil May Cry.</p>
+      <p id="1">Vergil was the eldest of twin sons born of the demon Sparda and human Eva. Following the death of their mother as children, Vergil and Dante go their separate ways, with Vergil rejecting his humanity and embracing his demonic heritage, contrasting his younger brother's embrace of humanity.</p>
+    </div>
+    <div class="model-container">
+      <div class="model">
+        <img src="resources/images/others/mary_model_resized.png" id="marry-model" alt="" onclick="changeOthersDescription(0)">
+      </div>
+    </div>
+    <div class="model-container">
+      <div class="model">
+        <img src="resources/images/others/vergil_model_resized.png" id="vergil-model" alt="" onclick="changeOthersDescription(1)">
+      </div>
+    </div>
+    <div class="model-container">
+      <div class="model">
+        <img src="resources/images/others/trish_model.png" id="trish-model" alt="" onclick="changeOthersDescription(2)">
+      </div>
     </div>
   </div>
   <div class="shopping-section">
-    <img src="resources/images/buy_this_game/dante_vs_nero_gun.png" alt="" width="100%">
+    <div id="product-image-overlay">
+      <div class="product-container">
+        <div style="cursor: pointer;" onmouseover="changeProductImage(0)">
+          <img src="resources/images/buy_this_game/dmc4.png" alt="">
+          <div class="buy-btn" id="dmc4">
+            <p>BUY DEVIL MAY CRY 4</p>
+          </div>
+        </div>
+        <div style="cursor: pointer;" onmouseover="changeProductImage(1)">
+          <img src="resources/images/buy_this_game/dmc3.jpg" alt="">
+          <div class="buy-btn" id="dmc3">
+            <p>BUY DEVIL MAY CRY 3</p>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div class="footer-section">
+    <div class="footer-text-container">
+      <p>Designer &amp; Programer: Pham Duc Binh</p>
+      <p>Images belong to Capcom and Associates</p>
+      <p>For more information please email binh1298@gmail.com</p>
+    </div>
   </div>
 </body>
 </html>

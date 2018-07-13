@@ -1,12 +1,8 @@
 html, body{
   padding: 0;
   margin: 0;
-  font-size: 16px;
+  font-size: 1.15vw;
   background-color: black;
-  overflow-x: hidden;
-}
-body{
-  overflow: hidden;
 }
 /* width */
 ::-webkit-scrollbar {
@@ -80,8 +76,8 @@ video{
   transition: 0.5s all ease;
 }
 .bg-container{
-  width: 100vw;
   position: relative;
+  overflow: hidden;
 }
 .description-box{
   background-image: url("../resources/images/words/light-red-p-container.png");
