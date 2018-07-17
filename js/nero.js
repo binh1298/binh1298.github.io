@@ -3,8 +3,8 @@ function switchCharacterNero(){
   switchingModel = true;
   var x = document.getElementById("nero-model-back");
   var y = document.getElementById("nero-model-front");
-  x.style.transform = "translateX(-80%)";
-  y.style.transform = "translateX(-20%)";
+  x.style.transform = "translateX(-90%)";
+  y.style.transform = "translateX(-30%)";
   x.style.opacity = "1";
   y.style.opacity = "0.4";
   function switchID(){
@@ -14,8 +14,8 @@ function switchCharacterNero(){
 
   }
   setTimeout(function(){
-    x.style.transform = "translateX(-50%)";
-    y.style.transform = "translateX(-50%)";
+    x.style.transform = "translateX(-60%)";
+    y.style.transform = "translateX(-60%)";
     switchID();
     setTimeout(function(){
       switchingModel = false;

@@ -133,6 +133,16 @@ video{
   position: relative;
   right: 50vw;
 }
+.bg-full-red{
+  background-image: url("../resources/images/bgs/full_red_darken_bottom.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bg-full-blue-purple{
+  background-image: url("../resources/images/bgs/full_blue_purple.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .section-container{
   width: 100%;
 }

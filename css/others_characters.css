@@ -1,6 +1,4 @@
-.grid-others-section{
-  background-image: url("../resources/images/bgs/b12.png");
-  background-size: contain;
+#grid-others-section{
   display: grid;
   grid-template-columns: 33.33% 33.33% 33.33%;
   position: relative;

@@ -1,6 +1,6 @@
-.dante-action-section{
-  background-image: url("../resources/images/bgs/r12.png");
-  background-size: cover;
+#dante-action-section{
+  /* background-image: url("../resources/images/bgs/r12.png");
+  background-size: cover; */
   height: 100vh;
   max-height: 100vh;
   position: relative;

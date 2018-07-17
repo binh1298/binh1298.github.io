@@ -1,9 +1,10 @@
-.grid-nero-section{
-  background-image: url("../resources/images/bgs/b11.png");
-  background-size: contain;
+#grid-nero-section{
   display: grid;
   grid-template-columns: 50% 50%;
   overflow-x: hidden;
+}
+#nero-model-front, #nero-model-back{
+  transform: translateX(-60%);
 }
 #nero-model-front img{
   margin-left: 0;

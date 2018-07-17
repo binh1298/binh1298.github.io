@@ -11,13 +11,13 @@ function pauseIntro()
 }
 function showLandingPage()
 {
+  if(disableIntroVid) return;
   var introVid = document.getElementById("introVid");
   function vanishVid(){
     introVid.style.opacity = "0";
     introVid.style.zIndex = "-1";
     disableIntroVid = true;
   }
-  // Combine with css to make slow transition
   introVid.style.opacity = 0;
   setTimeout(vanishVid, 1000);
   var danteContainer = document.getElementById("dante-container");
@@ -29,6 +29,15 @@ function showLandingPage()
   setTimeout(function(){
     navBar.style.opacity = 0.3;
   }, 1000);
+}
+
+function scrollToDiv(id)
+{
+  window.scroll({
+    top: document.getElementById(id).offsetTop, 
+    left: 0, 
+    behavior: 'smooth' 
+  });
 }
 function changeHalfsSizes(object, event)
 {

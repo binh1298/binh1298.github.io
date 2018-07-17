@@ -1,4 +1,4 @@
-.shopping-section{
+#shopping-section{
   background-image: url("../resources/images/introduction/overlaybg_flipped.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -12,14 +12,17 @@
   background-repeat: no-repeat;
   transition: 0.2s all;
 }
-.product-container{
+.product-big-container{
   margin-left: 62%;
   width: 18%;
   padding: 2% 10%;
 }
-.product-container img{
+.product-big-container img{
   width: 100%;
   margin-top: 10%;
+}
+.product-container{
+  cursor: pointer;
 }
 .buy-btn{
   width: 100%;
@@ -37,10 +40,10 @@
   color: white;
   font-size: 1em;
 }
-.buy-btn:hover p{
+.product-container:hover .buy-btn:hover p{
   text-shadow: 0px 0px 5px rgb(49, 49, 253);
 }
-.buy-btn:hover::before, .buy-btn:hover::after{
+.product-container:hover .buy-btn::before, .product-container:hover .buy-btn::after{
   width: 100%;
 }
 .buy-btn::before, .buy-btn::after{
