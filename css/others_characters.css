@@ -28,6 +28,9 @@
   opacity: 0;
   display: none;
 }
+#marry-model, #trish-model{
+  opacity: 0.4;
+}
 #marry-model, #vergil-model, #trish-model{
   display: block;
   margin: 0 auto;  
