@@ -8,19 +8,19 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/introduction.css">
   <link rel="stylesheet" href="css/dante.css">
-  <link rel="stylesheet" href="css/dante_weapons.css">
+  <link rel="stylesheet" href="css/dante_actions.css">
   <link rel="stylesheet" href="css/nero.css">
   <link rel="stylesheet" href="css/others_characters.css">
   <link rel="stylesheet" href="css/buy_this_game.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/responsive.css">
   <script src="js/main.js"></script>
-  <!-- <script src="js/dante.js"></script>
+  <script src="js/dante.js"></script>
   <script src="js/weapons.js"></script>
-  <script src="js/nero.js"></script> -->
+  <script src="js/nero.js"></script>
   <script src="js/others.js"></script>
   <script src="js/shop.js"></script>
-  <title>Devil May Cry 4: Special Edition</title>
+  <title>Devil May Cry</title>
 </head>
 <body onload="pauseIntro();changeCarouselNero()">
   <div class="nav-bar">
@@ -83,7 +83,7 @@
   </div>
   <div class="bg-full-red">
     <div class="section-container" id="grid-dante-section">
-      <div class="model-container flex-box">
+      <div class="model-container">
         <div class="model" id="dante-model-back">
           <img src="resources/images/dante_section/D_devil_form.png" onclick="switchCharacterDante()" alt="">
         </div>
@@ -140,11 +140,11 @@
             <source src="resources/video/Dante/4.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
           </video>
-            <!--   <video autoplay muted loop style="width: 100%">
-                  <source src="resources/video/Dante/4.mp4" type="video/mp4">
-                  Your browser does not support HTML5 video.
-                </video> -->
         </div> 
+        <video autoplay muted loop class="dante-action-video-decoy">
+          <source src="resources/video/Dante/1.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
       </div>
       <div class="hud-weapon-container" id="hud-gun-container" onclick="changeWeaponHudClockwise(this)">
         <img src="resources/images/devil_arms/transparent/hud_ebony_ivory.png" alt="" id="gun-hud-1">
@@ -183,7 +183,7 @@
           </div>
         </div>
       </div>
-      <div class="model-container flex-box">
+      <div class="model-container">
         <div class="model" id="nero-model-back">
           <img src="resources/images/nero_section/N_devil_form2.png" onclick="switchCharacterNero()" alt="">
         </div>

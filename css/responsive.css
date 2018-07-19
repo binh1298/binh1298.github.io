@@ -34,7 +34,7 @@
     width: 90%;
   }
   #dante-action-section{
-    height: 45vh;
+    /* height: 45vh; */
   }
   .hud-weapon-container img{
     width: 76%;
@@ -90,13 +90,13 @@
   }
   .model-container{
     min-height: 400px;
-    height: 53vh;
+    height: 65vh;
   }
   .carousel-video-container{
     padding: 0;
   }
   #dante-action-section{
-    height: 35vh;
+    /* height: 35vh; */
   }
   .tall-model{
     height: 100vh;
