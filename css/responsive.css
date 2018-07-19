@@ -22,6 +22,11 @@
   #grid-dante-section, #grid-nero-section, #grid-others-section{
     display: block;
   }
+  #grid-product-image-overlay{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  
   .model-container{
     min-height: 1200px;
     height: 70vh;
@@ -65,10 +70,9 @@
     width: 80%;
     margin: 0 auto;
   }
-  .product-big-container{
-    margin-left: 55%;
-    width: 25%;
-    padding: 2% 10%;
+  .product-big-container, #shop-form-container{
+    width: 80%;
+    margin: 0 auto;
   }
 }
 @media only screen and (max-width: 767px){
@@ -105,6 +109,9 @@
     width: 80%;
     margin: 0 auto;  
   }
+  #shop-form-container{
+    width: 100%;
+  }
   .product-big-container{
     margin-left: 0;
     padding: 0;
@@ -113,7 +120,7 @@
   .add-to-cart-btn{
     background-color: rgba(0, 0, 0, 0.863);
   }
-  .add-to-cart-btn p{
-    font-size: 1.5em;
+  .add-to-cart-btn p, .buy-btn p, .form-label{
+    font-size: 1.5em!important;
   }
 }

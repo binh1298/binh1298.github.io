@@ -33,11 +33,13 @@ function showLandingPage()
 
 function scrollToDiv(id)
 {
-  window.scroll({
-    top: document.getElementById(id).offsetTop, 
-    left: 0, 
-    behavior: 'smooth' 
-  });
+  document.getElementById(id).scrollIntoView({ block: 'start',  behavior: 'smooth' });
+  // console.log(id);
+  // window.scroll({
+  //   top: document.getElementById(id).offsetTop, 
+  //   left: 0, 
+  //   behavior: 'smooth' 
+  // });
 }
 function changeHalfsSizes(object, event)
 {
