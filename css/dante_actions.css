@@ -1,14 +1,21 @@
 #dante-action-section{
   /* background-image: url("../resources/images/bgs/r12.png");
   background-size: cover; */
-  height: 100vh;
-  max-height: 100vh;
+  /* height: 100vh;
+  max-height: 100vh; */
   position: relative;
   overflow: hidden;
 }
 .dante-action-cinema{
   width: 100%;
-  padding: 0 15%;
+  /* padding: 0 15%; */
+}
+.dante-action-video-decoy{
+  width: 70%; 
+  display: block; 
+  margin: 0 auto; 
+  margin-bottom: 10%; 
+  opacity: 0;
 }
 .hud-weapon-container{
   position: relative;
@@ -82,6 +89,9 @@
 }
 .dante-action-container{
   position: relative;
+  /* 15 + 70 + 15 = 100 */
+  left: 15%; 
+  
 }
 .dante-action-container img{
   position: absolute;
