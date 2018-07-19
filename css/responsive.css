@@ -123,4 +123,9 @@
   .add-to-cart-btn p, .buy-btn p, .form-label{
     font-size: 1.5em!important;
   }
+  .footer-text-container{
+    margin: 0 auto;
+    width: 75%;
+    font-size: 1.5em;
+  }
 }

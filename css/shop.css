@@ -101,6 +101,9 @@
   padding: 5% 0;
   position: relative;
 }
+.buy-btn{
+  margin-top: 10%;
+}
 .add-to-cart-btn p, .buy-btn p{
   position: relative;
   z-index: 2;
