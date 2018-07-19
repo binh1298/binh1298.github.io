@@ -97,6 +97,7 @@ video{
 }
 
 #introVid{
+  width: 100%;
   position: relative;
   z-index: 6;
 }
@@ -145,6 +146,11 @@ video{
 }
 .section-container{
   width: 100%;
+}
+.carousel-title{
+  display:block; 
+  margin: 0 auto; 
+  width: 30%;
 }
 .model-container{
   position: relative;

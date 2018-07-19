@@ -39,6 +39,7 @@
 .hud-weapon-container img{
   position: absolute;
   transition: 0.5s all;
+  width: 55%;
 }
 #hud-gun-container{
   position: absolute;
