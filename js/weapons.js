@@ -20,6 +20,9 @@ function changeWeaponHudClockwise(obj){
   containerDanteAction[0].id = containerDanteAction[1].id;
   containerDanteAction[1].id = containerDanteAction[2].id;
   containerDanteAction[2].id = temp;
+  containerDanteAction[0].currentTime = "0";
+  containerDanteAction[1].currentTime = "0";
+  containerDanteAction[2].currentTime = "0";
 }
 function changeWeaponHudCounterClockwise(obj){
   containerHUD = obj.children;
