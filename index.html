@@ -11,24 +11,26 @@
   <link rel="stylesheet" href="css/dante_actions.css">
   <link rel="stylesheet" href="css/nero.css">
   <link rel="stylesheet" href="css/others_characters.css">
-  <link rel="stylesheet" href="css/buy_this_game.css">
+  <link rel="stylesheet" href="css/shop.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="icon" href="resources/images/dante_icon.png">
   <script src="js/main.js"></script>
   <script src="js/dante.js"></script>
   <script src="js/weapons.js"></script>
   <script src="js/nero.js"></script>
-  <script src="js/others.js"></script>
+  <script src="js/other_characters.js"></script>
   <script src="js/shop.js"></script>
+  <script src="js/validate.js"></script>
   <title>Devil May Cry</title>
 </head>
-<body onload="pauseIntro();changeCarouselNero()">
+<body onload="pauseIntro();changeCarouselNero();initializePageStorage()">
   <div class="nav-bar">
     <ul>
       <li onclick="scrollToDiv('halfs-container')">HOME</li>
       <li onclick="scrollToDiv('introduction-section')">INTRODUCTION</li>
       <li onclick="scrollToDiv('grid-dante-section')">DANTE</li>
-      <li onclick="scrollToDiv('dante-action-section')">DANTE'S WEAPONS</li>
+      <li onclick="scrollToDiv('dante-action-section')">DANTE'S ACTIONS</li>
       <li onclick="scrollToDiv('grid-nero-section')">NERO</li>
       <li onclick="scrollToDiv('grid-others-section')">OTHERS</li>
       <li onclick="scrollToDiv('shopping-section')">BUY THIS GAME</li>
@@ -210,33 +212,73 @@
       </div>
       <div class="model-container tall-model">
         <div class="model">
-          <img src="resources/images/others/mary_model_resized.png" id="marry-model" alt="" onclick="changeOthersDescription(0)">
+          <img src="resources/images/other_characters/mary_model_resized.png" id="marry-model" alt="" onclick="changeOthersDescription(0)">
         </div>
       </div>
       <div class="model-container tall-model">
         <div class="model">
-          <img src="resources/images/others/vergil_model_resized.png" id="vergil-model" alt="" onclick="changeOthersDescription(1)">
+          <img src="resources/images/other_characters/vergil_model_resized.png" id="vergil-model" alt="" onclick="changeOthersDescription(1)">
         </div>
       </div>
       <div class="model-container tall-model">
         <div class="model">
-          <img src="resources/images/others/trish_model.png" id="trish-model" alt="" onclick="changeOthersDescription(2)">
+          <img src="resources/images/other_characters/trish_model.png" id="trish-model" alt="" onclick="changeOthersDescription(2)">
         </div>
       </div>
     </div>
   </div>
   <div id="shopping-section">
-    <div id="product-image-overlay">
+    <div id="grid-product-image-overlay">
+      <div id="shop-form-container">
+        <div style="position: absolute; top: 2%; right: 2%;" onclick="transformForm('translateX(-200%)')">
+          <img src="resources/images/Arrow_left.png" alt="" style="width: 3vw" class="carousel-btn">
+        </div>
+        <p class="form-label" style="visibility: hidden" id="form-messenger">*</p>
+        <form autocomplete="off" id="customer-info-form">
+          <p class="form-label">Your name:</p>
+          <div class="form-text-field-container">
+            <input type="text" name="customerName" id="user_name" autocomplete="false" onfocus="showInputBorder(this)" onfocusout="hideInputBorder(this)">
+          </div>
+          <p class="form-label">Email:</p>
+          <div class="form-text-field-container">            
+            <input type="text" name="customerEmail" id="user_email" autocomplete="false" onfocus="showInputBorder(this)" onfocusout="hideInputBorder(this)">
+          </div>
+          <!-- <p class="form-label">Phone number:</p>
+          <div class="form-text-field-container">
+            <input type="text" name="customerPhonenumber" autocomplete="false" onfocus="showInputBorder(this)" onfocusout="hideInputBorder(this)">
+          </div> -->
+          <div id="shopping-cart">
+            <p class="form-label">Items in your cart:</p>
+            <div class="grid-product-cart">
+              <div id="dmc4-in-cart">
+                <div style="position: absolute; top: 2%; right: 2%;" onclick="removeProduct('dmc4'); updateVisualCart()">
+                  <img src="resources/images/Arrow_left.png" alt="" style="width: 3vw" class="carousel-btn">
+                </div>
+                <img src="resources/images/buy_this_game/dmc4.png" alt="" onmouseover="changeProductImage(0)">
+              </div>
+              <div id="dmc3-in-cart">
+                <div style="position: absolute; top: 2%; right: 2%;" onclick="removeProduct('dmc3'); updateVisualCart()">
+                  <img src="resources/images/Arrow_left.png" alt="" style="width: 3vw" class="carousel-btn">
+                </div>
+                <img src="resources/images/buy_this_game/dmc3.jpg" alt="" onmouseover="changeProductImage(1)">
+              </div>
+            </div>
+          </div>
+          <div class="buy-btn" onclick="checkOut()">
+            <p>CHECK OUT</p>
+          </div>
+        </form>
+      </div>
       <div class="product-big-container">
-        <div class="product-container" onmouseover="changeProductImage(0)">
+        <div class="product-container" onmouseover="changeProductImage(0)" onclick="buyProduct('dmc4'); updateVisualCart(); scrollToDiv('shop-form-container')">
           <img src="resources/images/buy_this_game/dmc4.png" alt="">
-          <div class="buy-btn" id="dmc4">
+          <div class="add-to-cart-btn" id="dmc4">
             <p>BUY DEVIL MAY CRY 4</p>
           </div>
         </div>
         <div class="product-container" onmouseover="changeProductImage(1)">
-          <img src="resources/images/buy_this_game/dmc3.jpg" alt="">
-          <div class="buy-btn" id="dmc3">
+          <img src="resources/images/buy_this_game/dmc3.jpg" alt="" onclick="buyProduct('dmc3'); updateVisualCart(); scrollToDiv('shop-form-container')" style="margin-top: 10%">
+          <div class="add-to-cart-btn" id="dmc3">
             <p>BUY DEVIL MAY CRY 3</p>
           </div>
         </div>

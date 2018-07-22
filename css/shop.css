@@ -1,0 +1,148 @@
+#shopping-section{
+  background-image: url("../resources/images/introduction/overlaybg_flipped.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+#grid-product-image-overlay{
+  text-align: right;
+  width: 100%;
+  background-image: url("../resources/images/buy_this_game/dante_vs_nero_gun.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 0.2s all;
+  display: grid;
+  grid-template-columns: 62% 38%;
+  padding: 5%;
+  box-sizing: border-box;
+}
+
+#shop-form-container{
+  position: relative;
+  width: 80%;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: left;
+  padding: 5%;
+  transition: 1s all;
+  transform: translateX(-200%);
+}
+#shop-form-container .form-label, #shopping-cart{
+  margin: 2% 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: rgb(214, 214, 214);
+  font-size: 1.2em;
+}
+#form-messenger{
+  color: #ff3535!important;
+}
+#customer-info-form{
+  overflow: hidden;
+}
+.grid-product-cart{
+  display: grid;
+  grid-template-columns: 48% 48%;
+  grid-column-gap: 4%;
+}
+.grid-product-cart > div{
+  position: relative;
+  transition: 1s all;
+  display: none;
+  opacity: 0;
+}
+.grid-product-cart img{
+  width: 100%;
+}
+.form-text-field-container{
+  position: relative;
+}
+.form-text-field-container::before, .form-text-field-container::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 0%;
+  height: 0.15rem;
+  z-index: 1;
+  transition: 0.5s all ease;
+}
+.max-width-pseudo::before, .max-width-pseudo::after{
+  width: 100%;
+}
+#shop-form-container input[type='text']{
+  background-color: transparent;
+  width: 100%;
+  border: none;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: rgb(214, 214, 214);
+  font-size: 1em;
+  border-bottom: 0.15rem solid rgb(187, 187, 187);
+}
+#shop-form-container input[type='text']:focus{
+  outline: none;
+  border: none;
+  border-bottom: 0.15rem solid transparent;
+}
+
+.product-big-container{
+  width: 60%;
+  margin-left: 40%;
+}
+.product-big-container img{
+  width: 100%;
+}
+.product-container{
+  cursor: pointer;
+}
+.add-to-cart-btn, .buy-btn{
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid white;
+  text-align: center;
+  padding: 5% 0;
+  position: relative;
+}
+.buy-btn{
+  margin-top: 10%;
+}
+.add-to-cart-btn p, .buy-btn p{
+  position: relative;
+  z-index: 2;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: 0 auto;
+  color: white;
+  font-size: 1em;
+}
+
+.product-container:hover .add-to-cart-btn:hover p{
+  text-shadow: 0px 0px 5px rgb(49, 49, 253);
+}
+.product-container:hover .add-to-cart-btn::before, .product-container:hover .add-to-cart-btn::after, 
+.buy-btn:hover::before, .buy-btn:hover::after{
+  width: 100%;
+}
+.add-to-cart-btn::before, .add-to-cart-btn::after, .buy-btn::before, .buy-btn::after{
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transition: all 0.15s ease;
+  width: 0;
+  z-index: 0;
+}
+#dmc3::before, .buy-btn::before, .form-text-field-container::before{
+  background: linear-gradient(to right, #fc0707 0%, rgba(252, 7, 7, 0) 85%);
+  left: 0;
+}
+#dmc3::after, .buy-btn::after, .form-text-field-container::after{
+  background: linear-gradient(to left, #0d4896 0%, rgba(13, 145, 150, 0) 85%);
+  right: 0;
+}
+#dmc4::before{
+  left: 0;
+  background: linear-gradient(to right, #0d4896 0%, rgba(13, 145, 150, 0) 85%);
+}
+#dmc4::after{
+  background: linear-gradient(to left, #fc0707 0%, rgba(252, 7, 7, 0) 85%);
+  right: 0;
+}
