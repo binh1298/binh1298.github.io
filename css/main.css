@@ -28,6 +28,8 @@ html, body{
   background-color: black;
   position: fixed;
   z-index: 500;
+  bottom: 0;
+  right: 0;
   display: block;
 }
 .nav-bar{

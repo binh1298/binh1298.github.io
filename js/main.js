@@ -1,13 +1,22 @@
 var disableIntroVid = false;
 
+function removeLoadingScreen()
+{
+  scrollToDiv("halfs-container");
+  document.getElementById("loading-screen").remove();
+  document.getElementById("introVid").play();
+  pauseIntro();
+  changeCarouselNero();
+  initializePageStorage();
+}
 function pauseIntro()
 {
   var introVid = document.getElementById("introVid");
-  function pauseVid(){
+  setTimeout(function(){
     introVid.pause();
     setTimeout(showLandingPage, 1000);
-  }
-  setTimeout(pauseVid, 10000);
+    },
+    10000);
 }
 function showLandingPage()
 {
