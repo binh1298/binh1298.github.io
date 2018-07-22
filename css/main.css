@@ -159,7 +159,6 @@ video{
   padding: 4% 0 0;
   width: 80%;
   margin: 0 auto;
-  overflow: hidden;
 }
 .model-container *{
   transition: 0.5s all;
