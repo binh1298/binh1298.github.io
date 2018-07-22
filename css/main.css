@@ -23,6 +23,13 @@ html, body{
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.8); 
 }
+#loading-screen{
+  width: 100%;
+  background-color: black;
+  position: fixed;
+  z-index: 500;
+  display: block;
+}
 .nav-bar{
   position: fixed;
   text-align: center;
