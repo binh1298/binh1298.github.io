@@ -60,12 +60,14 @@ function removeProduct(productCode)
 }
 function updateVisualCart()
 {
+  var totalPrice = 0;
   var dmc3 = document.getElementById("dmc3-in-cart");
   var dmc4 = document.getElementById("dmc4-in-cart");
   if(findProductInLocalStorage("dmc3"))
   {
     dmc3.style.display = "block";
     dmc3.style.opacity = "1";
+    totalPrice++;
   }
   else
   {
@@ -76,12 +78,14 @@ function updateVisualCart()
   {
     dmc4.style.display = "block";
     dmc4.style.opacity = "1";
+    totalPrice++;
   }
   else
   {
     dmc4.style.display = "none";
     dmc4.style.opacity = "0";
   }
+  document.getElementById("total-price").innerHTML = (totalPrice * 60) + "$"; 
 }
 function checkOut()
 {

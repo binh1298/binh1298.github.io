@@ -66,11 +66,6 @@
   </div>
 
   <div id="introduction-section">
-      <!-- 
-      Adding top/left of 50% moves the top/left margin edge of the element to the middle of the parent
-      and translate() function with the (negative) value of -50% moves the element by the half of its size.
-      Hence the element will be positioned at the middle.
-      -->
     <div style="position: absolute; top: 2%; left: 50%; transform: translate(-50%, -50%); margin: 2% auto; width: 15vw">
       <img src="resources/images/words/the_origin.png" alt="" style="display:block; margin: 0 auto; width: 100%">
       <img src="resources/images/horizontal_bar.png" alt="" style="display:block; margin: 0 auto; width: 60%">
@@ -147,7 +142,7 @@
             Your browser does not support HTML5 video.
           </video>
           <video autoplay muted loop id="dante-action-arm-2">
-            <source src="resources/video/Dante/dante_5.mp4" type="video/mp4">
+            <source src="resources/video/Dante/dante_7.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
           </video>
           <video autoplay muted loop id="dante-action-arm-3">
@@ -248,7 +243,7 @@
             <input type="text" name="customerPhonenumber" autocomplete="false" onfocus="showInputBorder(this)" onfocusout="hideInputBorder(this)">
           </div> -->
           <div id="shopping-cart">
-            <p class="form-label">Items in your cart:</p>
+            <p class="form-label">Total price: <span id="total-price"></span></p>
             <div class="grid-product-cart">
               <div id="dmc4-in-cart">
                 <div style="position: absolute; top: 2%; right: 2%;" onclick="removeProduct('dmc4'); updateVisualCart()">
@@ -276,8 +271,8 @@
             <p>BUY DEVIL MAY CRY 4</p>
           </div>
         </div>
-        <div class="product-container" onmouseover="changeProductImage(1)">
-          <img src="resources/images/buy_this_game/dmc3.jpg" alt="" onclick="buyProduct('dmc3'); updateVisualCart(); scrollToDiv('shop-form-container')" style="margin-top: 10%">
+        <div class="product-container" onmouseover="changeProductImage(1)" onclick="buyProduct('dmc3'); updateVisualCart(); scrollToDiv('shop-form-container')" >
+          <img src="resources/images/buy_this_game/dmc3.jpg" alt="" style="margin-top: 10%">
           <div class="add-to-cart-btn" id="dmc3">
             <p>BUY DEVIL MAY CRY 3</p>
           </div>
@@ -288,8 +283,9 @@
   <div class="footer-section">
     <div class="footer-text-container">
       <p>Designer &amp; Programer: Pham Duc Binh</p>
-      <p>Images belong to Capcom and Associates</p>
       <p>For more information please email binh1298@gmail.com</p>
+      <p>Images belong to Capcom and Associates</p>
+      <p>Combo videos of donguri990</p>
     </div>
   </div>
 </body>
