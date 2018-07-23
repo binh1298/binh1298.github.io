@@ -19,7 +19,7 @@
   #intro-p-1 p, #intro-p-2 p{
     margin-right: 12%;
   }
-  #grid-dante-section, #grid-nero-section, #grid-others-section{
+  #grid-dante-section, #grid-nero-section{
     display: block;
   }
   #grid-product-image-overlay{
@@ -28,8 +28,8 @@
   }
   
   .model-container{
-    min-height: 1200px;
-    height: 70vh;
+    /* min-height: 1000px; */
+    height: 80vh;
   }
   #dante-model-front img, #nero-model-front img{
     margin-left: 0%;
@@ -64,9 +64,6 @@
     width: 100%;
   }
   #others-description{
-    position: sticky;
-    transform: translate(0, 0);
-    left: 0;
     width: 80%;
     margin: 0 auto;
   }
@@ -102,6 +99,16 @@
   #dante-action-section{
     /* height: 35vh; */
   }
+  #grid-others-section{
+    display: block;
+  }
+  #others-description{
+    position: sticky;
+    transform: translate(0, 0);
+    left: 0;
+    width: 80%;
+    margin: 0 auto;
+  }
   .tall-model{
     height: 100vh;
   }
@@ -127,5 +134,11 @@
     margin: 0 auto;
     width: 75%;
     font-size: 1.5em;
+  }
+}
+@media only screen and (max-height: 420px){
+  .model-container{
+    /* min-height: 1000px; */
+    height: 210vh;
   }
 }
