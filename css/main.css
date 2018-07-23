@@ -25,9 +25,17 @@ html, body{
 }
 #loading-screen{
   width: 100%;
+  height: 100vh;
   background-color: black;
   position: fixed;
-  z-index: 500;
+  z-index: 501;
+  top: 0;
+  right: 0;
+}
+#loading-screen img{
+  width: 100%;
+  background-color: black;
+  position: fixed;
   bottom: 0;
   right: 0;
   display: block;

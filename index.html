@@ -25,7 +25,9 @@
   <title>Devil May Cry</title>
 </head>
 <body onload="removeLoadingScreen()">
-  <img src="resources/images/loading_screen.gif" alt="" id="loading-screen">
+  <div id="loading-screen">
+    <img src="resources/images/loading_screen.gif" alt="">
+  </div>
   <div class="nav-bar">
     <ul>
       <li onclick="scrollToDiv('halfs-container')">HOME</li>
@@ -208,17 +210,17 @@
       </div>
       <div class="model-container tall-model">
         <div class="model">
-          <img src="resources/images/other_characters/mary_model_resized.png" id="marry-model" alt="" onclick="changeOthersDescription(0)">
+          <img src="resources/images/other_characters/mary_model_resized.png" id="marry-model" alt="" onclick="changeOthersDescription(0); scrollToDiv('grid-others-section')">
         </div>
       </div>
       <div class="model-container tall-model">
         <div class="model">
-          <img src="resources/images/other_characters/vergil_model_resized.png" id="vergil-model" alt="" onclick="changeOthersDescription(1)">
+          <img src="resources/images/other_characters/vergil_model_resized.png" id="vergil-model" alt="" onclick="changeOthersDescription(1); scrollToDiv('grid-others-section')">
         </div>
       </div>
       <div class="model-container tall-model">
         <div class="model">
-          <img src="resources/images/other_characters/trish_model.png" id="trish-model" alt="" onclick="changeOthersDescription(2)">
+          <img src="resources/images/other_characters/trish_model.png" id="trish-model" alt="" onclick="changeOthersDescription(2); scrollToDiv('grid-others-section')">
         </div>
       </div>
     </div>
