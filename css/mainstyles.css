@@ -81,22 +81,22 @@ img {
 }
 
 .bgimg-1 {
-    background-image: url("https://binh1298.github.io/resources/images/home-head.jpg");
+    background-image: url("../resources/images/home-head.jpg");
     min-height: 110vh;
 }
 
 .bgimg-2 {
-    background-image: url("https://binh1298.github.io/resources/images/home-03.jpg");
+    background-image: url("../resources/images/home-03.jpg");
     min-height: 140vh;
 }
 
 .bgimg-3 {
-    background-image: url("https://binh1298.github.io/resources/images/home-04.jpg");
+    background-image: url("../resources/images/home-04.jpg");
     min-height: 120vh;
 }
 
 .bgimg-4 {
-    background-image: url("https://binh1298.github.io/resources/images/home-06.jpg");
+    background-image: url("../resources/images/home-06.jpg");
     min-height: 180vh;
 }
 
