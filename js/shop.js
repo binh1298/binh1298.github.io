@@ -1,4 +1,6 @@
 // Local Storage
+initializePageStorage();
+
 function initializePageStorage()
 {
   if(window.localStorage.getItem("numOfProductInCart") == null)

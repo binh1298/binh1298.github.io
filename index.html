@@ -24,10 +24,7 @@
   <script src="js/validate.js"></script>
   <title>Devil May Cry</title>
 </head>
-<body onload="removeLoadingScreen()">
-  <div id="loading-screen">
-    <img src="resources/images/loading_screen.gif" alt="">
-  </div>
+<body onload="">
   <div class="nav-bar">
     <ul>
       <li onclick="scrollToDiv('halfs-container')">HOME</li>
@@ -41,7 +38,10 @@
   </div>
   <div class="bg-container">
     <div class="father-half-container" onmouseover="changeHalfsSizes(this, event)" onmouseout="resetDefaultHalfsSizes()" id="halfs-container">
-      <video id="introVid" muted onclick="showLandingPage()">
+      <div class="loading-screen">
+        <img src="resources/images/loading_screen.gif" alt="">
+      </div> 
+      <video id="introVid" muted onclick="showLandingPage()" onloadeddata="removeLoadingScreen(this);pauseIntro();">
         <source src="resources/video/DMC4SE_Intro_Vergil.mp4" type="video/mp4">
         Your browser does not support HTML5 video.
       </video>
@@ -123,35 +123,65 @@
       </div>
       <div class="dante-action-cinema">
         <div class="dante-action-container" id="dante-action-arm">
-          <video autoplay muted loop id="dante-action-arm-1">
-            <source src="resources/video/Dante/dante_4.mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
-          </video>
-          <video autoplay muted loop id="dante-action-arm-2">
-            <source src="resources/video/Dante/dante_7.mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
-          </video>
-          <video autoplay muted loop id="dante-action-arm-3">
-            <source src="resources/video/Dante/dante_6.mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
-          </video>
+          <div id="dante-action-arm-1">
+            <div class="video-loading-screen">
+              <img src="resources/images/loading_screen.gif" alt="">
+            </div> 
+            <video autoplay muted loop onloadeddata="removeLoadingScreen(this);">
+              <source src="resources/video/Dante/dante_4.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
+          <div id="dante-action-arm-2">
+            <div class="video-loading-screen">
+              <img src="resources/images/loading_screen.gif" alt="">
+            </div> 
+            <video autoplay muted loop onloadeddata="removeLoadingScreen(this);">
+              <source src="resources/video/Dante/dante_7.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
+          <div id="dante-action-arm-3">
+            <div class="video-loading-screen">
+              <img src="resources/images/loading_screen.gif" alt="">
+            </div> 
+            <video autoplay muted loop onloadeddata="removeLoadingScreen(this);">
+              <source src="resources/video/Dante/dante_6.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
         </div> 
         <div class="dante-action-container" id="dante-action-gun">
           <!-- <img src="resources/images/devil_arms/art_work/ivory_ebony.jpg" alt="" id="">
           <img src="resources/images/devil_arms/art_work/pandora.jpg" alt="" id="dante-action-gun-2">
           <img src="resources/images/devil_arms/art_work/gilgamesh.jpg" alt="" id="dante-action-gun-3"> -->
-          <video autoplay muted loop id="dante-action-gun-1">
-            <source src="resources/video/Dante/dante_1.mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
-          </video>
-          <video autoplay muted loop id="dante-action-gun-2">
-            <source src="resources/video/Dante/dante_2.mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
-          </video>
-          <video autoplay muted loop id="dante-action-gun-3">
-            <source src="resources/video/Dante/dante_3.mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
-          </video>
+          <div id="dante-action-gun-1">
+            <div class="video-loading-screen">
+              <img src="resources/images/loading_screen.gif" alt="">
+            </div> 
+            <video autoplay muted loop onloadeddata="removeLoadingScreen(this);">
+              <source src="resources/video/Dante/dante_1.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
+          <div id="dante-action-gun-2">
+            <div class="video-loading-screen">
+              <img src="resources/images/loading_screen.gif" alt="">
+            </div> 
+            <video autoplay muted loop onloadeddata="removeLoadingScreen(this);">
+              <source src="resources/video/Dante/dante_2.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
+          <div id="dante-action-gun-3">
+            <div class="video-loading-screen">
+              <img src="resources/images/loading_screen.gif" alt="">
+            </div> 
+            <video autoplay muted loop onloadeddata="removeLoadingScreen(this);">
+              <source src="resources/video/Dante/dante_3.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
         </div> 
         <video autoplay muted loop class="dante-action-video-decoy">
           <source src="resources/video/Dante/1.mp4" type="video/mp4">

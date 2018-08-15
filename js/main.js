@@ -1,14 +1,9 @@
 var disableIntroVid = false;
-
-function removeLoadingScreen()
+function removeLoadingScreen(video)
 {
-  scrollToDiv("halfs-container");
-  document.getElementById("loading-screen").remove();
-  document.getElementById("introVid").play();
-  pauseIntro();
-  changeCarouselNero();
-  initializePageStorage();
+  video.parentNode.firstElementChild.remove();
 }
+
 function pauseIntro()
 {
   var introVid = document.getElementById("introVid");

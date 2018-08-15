@@ -1,3 +1,5 @@
+changeCarouselNero();
+
 function switchCharacterNero(){
   if(switchingModel) return;
   switchingModel = true;
