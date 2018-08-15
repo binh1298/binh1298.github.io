@@ -1,0 +1,100 @@
+/* The Menu */
+.content-3 > div{
+    background-color: white;
+    margin: 0 auto;
+}
+.content-3-title > div{
+    text-align: center;
+}
+.the-menu{
+    font-size: 1vw;
+}
+.specials{
+    font-size: 4.4vw;
+}
+.food-menu-grid{
+    display: grid;
+    grid-template-columns: 40% 10% 40% 10%;
+    width: 80%;
+}
+.menu-column-grid{
+    display: grid;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+.food-menu-side-grid{
+    display: grid;
+    grid-template-columns: 65% 35%;
+}
+.grid-spacer{
+    height: 5%;
+}
+.menu-hr{
+    border: none;
+    background-color: rgba(187, 187, 187, 0.4);
+    width: 100%;
+    height: 3px;
+}
+.item-hr{
+    border: none;
+    background-color: rgba(187, 187, 187, 0.4);
+    width: 100%;
+    height: 2px;
+}
+.types-of-menu-items > div{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 2vw;
+    font-weight: bold;
+    padding-bottom: 7%;
+}
+.types-of-menu-items > hr{
+    margin-bottom: 7%;
+}
+.menu-item{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.6vw;
+    font-weight: bold;
+}
+.item-caption{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.1vw;
+    font-weight: 400;
+    color: rgb(150, 150, 150);
+    padding-top: 7%;
+    padding-bottom: 3%;
+}
+.price{
+    text-align: center;
+}
+.btn-see-all-menu{
+    min-width: 9vw;
+    min-height: 2.5vw;
+    width: 12vw;
+    height: 3vw;
+    border: none;
+    border-radius: 3px;
+    background-color: black;
+    position: relative;
+    margin: 4vw;
+    margin-bottom: 6vw;
+}
+.see-all-menu{
+    font-family: 'Noto Sans', sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9vw;
+    letter-spacing: 1px;
+    transition: 0.2s;
+    padding-left: 15%;
+}
+.white-arrow{
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+    display: inline;
+    max-width: 0.8vw;
+    position: absolute;
+    left: 15%;
+    top: 35%;
+}
+.btn-see-all-menu:hover {
+    background-color: rgb(255, 159, 13)
+}

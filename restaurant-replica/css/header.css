@@ -1,0 +1,96 @@
+.header-disapearing-bar-grid {
+    padding-top: 0.6vw;
+    padding-bottom: 1.6vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 65% 35%;
+    min-width: 1150px;
+    max-width: 60vw;
+}
+.home-logo {
+    box-sizing: border-box;
+    float: left;
+    margin-top: 1.4vw;
+    min-width: 7vw;
+}
+.navigation-button-container-grid {
+    display: grid;
+    grid-template-columns: 20% 20% 24% 16% 20%;
+}
+
+a.navigation-button {
+    position: relative;
+    display: block;
+    font-family: 'Nunito', sans-serif;
+    text-decoration-line: none;
+    color: white;
+    font-size: 1vw;
+    font-weight: 600;
+    margin-top: 2vw;
+}
+
+/* Hover Animation */
+
+a.navigation-button::after {
+    content: "";
+    transition: 0.3s all ease;
+    position: absolute;
+    bottom: -0.3px;
+    height: 0.15vw;
+    left: 0;
+    width: 0;
+    opacity: 1;
+    background: white;
+}
+
+#home::after {
+    width: 3em;
+    opacity: 1;
+}
+
+#story:hover::after {
+    width: 3.2em;
+    opacity: 1;
+}
+
+#gallery:hover::after {
+    width: 4.4em;
+    opacity: 1;
+}
+
+#menu:hover::after {
+    width: 2.8em;
+    opacity: 1;
+}
+
+#contact:hover::after {
+    width: 4.6em;
+    opacity: 1;
+}
+
+/* ---------- */
+
+.header-signature {
+    color: white;
+    text-align: center;
+    font-weight: 500;
+    margin: 20px;
+}
+
+.request-demo {
+    padding: 0.8vw 1.6vw;
+    border: none;
+    border-radius: 3px;
+    background-color: white;
+    font-family: 'Noto Sans', sans-serif;
+    text-decoration-color: #353535;
+    font-weight: bolder;
+    font-size: 0.9vw;
+    letter-spacing: 1px;
+    transition: 0.2s;
+}
+
+.request-demo:hover {
+    background-color: rgb(255, 159, 13)
+}
+
