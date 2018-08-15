@@ -1,5 +1,5 @@
 #shopping-section{
-  background-image: url("../resources/images/introduction/overlaybg_flipped.png");
+  background-image: url("../resources/images/introduction/overlaybg_flipped_compressed.png");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
@@ -7,7 +7,7 @@
 #grid-product-image-overlay{
   text-align: right;
   width: 100%;
-  background-image: url("../resources/images/buy_this_game/dante_vs_nero_gun.png");
+  background-image: url("../resources/images/buy_this_game/dante_vs_nero_gun_compressed.png");
   background-size: cover;
   background-repeat: no-repeat;
   transition: 0.2s all;

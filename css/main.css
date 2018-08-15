@@ -152,12 +152,12 @@ video{
   right: 50vw;
 }
 .bg-full-red{
-  background-image: url("../resources/images/bgs/full_red_darken_bottom.png");
+  background-image: url("../resources/images/bgs/full_red_darken_bottom_compressed.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 .bg-full-blue-purple{
-  background-image: url("../resources/images/bgs/full_blue_purple.png");
+  background-image: url("../resources/images/bgs/full_blue_purple_compressed.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }

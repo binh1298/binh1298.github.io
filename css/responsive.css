@@ -51,12 +51,12 @@
     right: 6%;
   }
   #grid-nero-section{
-    background-image: url("../resources/images/bgs/full_blue.png");
+    background-image: url("../resources/images/bgs/full_blue_compressed.jpg");
     background-size: cover;
     background-repeat: no-repeat;
   }
   #grid-others-section{
-    background-image: url("../resources/images/bgs/full_purple.png");
+    background-image: url("../resources/images/bgs/full_purple_compressed.jpg");
     background-size: cover;
     background-repeat: no-repeat;
   }

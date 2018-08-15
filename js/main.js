@@ -2,6 +2,7 @@ var disableIntroVid = false;
 function removeLoadingScreen(video)
 {
   video.parentNode.firstElementChild.remove();
+  video.play();
 }
 
 function pauseIntro()
@@ -20,14 +21,17 @@ function showLandingPage()
   function vanishVid(){
     introVid.style.opacity = "0";
     introVid.style.zIndex = "-1";
-    disableIntroVid = true;
   }
   introVid.style.opacity = 0;
   setTimeout(vanishVid, 1000);
+  setTimeout(function(){
+    disableIntroVid = true;
+  },
+  2500);
   var danteContainer = document.getElementById("dante-container");
   var neroContainerChild = document.getElementById("nero-container-child");
   var navBar = document.getElementsByClassName("nav-bar")[0];
-  danteContainer.style.left = 0;
+  danteContainer.style.left = "0";
   neroContainerChild.style.right = "-50vw";
   navBar.style.top = 0;
   setTimeout(function(){
@@ -48,6 +52,7 @@ function scrollToDiv(id)
 function changeHalfsSizes(object, event)
 {
   if(screen.width <= 1024 || !disableIntroVid) return;
+  console.log(event.clientX);
   var currentMouseVerticalPos = event.clientX;
   var totalWidth = screen.width;
   var danteContainer = document.getElementById("dante-container");
@@ -79,6 +84,7 @@ function changeHalfsSizes(object, event)
 }
 function resetDefaultHalfsSizes()
 {
+  if(screen.width <= 1024 || !disableIntroVid) return;
   var danteContainer = document.getElementById("dante-container");
   var neroContainer = document.getElementById("nero-container");
   var neroContainerChild = document.getElementById("nero-container-child");
