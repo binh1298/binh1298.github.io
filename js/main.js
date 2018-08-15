@@ -52,7 +52,6 @@ function scrollToDiv(id)
 function changeHalfsSizes(object, event)
 {
   if(screen.width <= 1024 || !disableIntroVid) return;
-  console.log(event.clientX);
   var currentMouseVerticalPos = event.clientX;
   var totalWidth = screen.width;
   var danteContainer = document.getElementById("dante-container");
