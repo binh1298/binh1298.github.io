@@ -7,9 +7,9 @@ function removeLoadingScreen(video)
 
 function pauseIntro()
 {
+  console.log("pauseIntro");
   var introVid = document.getElementById("introVid");
   setTimeout(function(){
-    introVid.pause();
     setTimeout(showLandingPage, 1000);
     },
     10000);
@@ -19,15 +19,13 @@ function showLandingPage()
   if(disableIntroVid) return;
   var introVid = document.getElementById("introVid");
   function vanishVid(){
+    introVid.pause();
     introVid.style.opacity = "0";
     introVid.style.zIndex = "-1";
+    disableIntroVid = true;
   }
   introVid.style.opacity = 0;
   setTimeout(vanishVid, 1000);
-  setTimeout(function(){
-    disableIntroVid = true;
-  },
-  2500);
   var danteContainer = document.getElementById("dante-container");
   var neroContainerChild = document.getElementById("nero-container-child");
   var navBar = document.getElementsByClassName("nav-bar")[0];
