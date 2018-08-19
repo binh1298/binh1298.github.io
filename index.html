@@ -5,8 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Dante's Personal Projects</title>
-  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
   <link rel="stylesheet" href="css/main.css">
+  <script src="js/main.js"></script>
+  <script src="js/scrollEvent.js"></script>
 </head>
 <body>
   <div></div>
@@ -16,11 +19,19 @@
       <h4>Mentor: </h4>
       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet voluptatem consectetur, adipisci perspiciatis quaerat nostrum eius deserunt vitae sed esse consequuntur molestias nam architecto autem eaque eos quod a perferendis.</p>
       <div class="grid-slider-btn-container">
-        <div class="slider-btn"></div>
-        <div class="slider-btn"></div>
+        <div class="slider-btn" onclick="moveProjectSlider(-1)"><i class="fa fa-angle-up"></i></div>
+        <div class="slider-btn" onclick="moveProjectSlider(1)"><i class="fa fa-angle-down"></i></div>
       </div>
     </div>
-    <div class="projects-slider">
+    <div id="projects-slider">
+      <div class="flex-project-container">
+        <div>
+          <video autoplay muted style="width: 100%; display: inline-block;">
+            <source src="projects_container/devil_may_cry/resources/video/DMC4SE_Intro_Vergil_compressed.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+        </div>
+      </div>
       <div class="flex-project-container">
         <div>
           <video autoplay muted style="width: 100%; display: inline-block;">

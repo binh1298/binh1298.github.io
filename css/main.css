@@ -6,6 +6,7 @@ html, body{
 .grid-slider-container{
   background-color: rgb(255, 86, 86);
   height: 100vh;
+  overflow: hidden;
   width: 100%;
   display: grid;
   grid-template-columns: 30% 50% 20%;
@@ -25,10 +26,17 @@ html, body{
 }
 .slider-btn{
   background-color: black;
+  color: white;
+  font-size: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 5%;
 }
-.projects-slider{
-  border: 1px solid black;
+#projects-slider{
+  height: 100vh;
+  box-sizing: border-box;
+  transition: 1s all ease-in-out;
 }
 .flex-project-container{
   display: flex;
@@ -36,4 +44,5 @@ html, body{
   position: relative;
   align-items: center;
   justify-content: center;
+  border: 1px solid black;
 }
