@@ -1,52 +1,45 @@
-var dragged;
-
-/* events fired on the draggable target */
-document.addEventListener("drag", function (event) {
-
-}, false);
-
-document.addEventListener("dragstart", function (event) {
-  // store a ref. on the dragged elem
-  dragged = event.target;
-  // make it half transparent
-  event.target.style.opacity = .5;
-}, false);
-
-document.addEventListener("dragend", function (event) {
-  // reset the transparency
-  event.target.style.opacity = "";
-}, false);
-
-/* events fired on the drop targets */
-document.addEventListener("dragover", function (event) {
-  // prevent default to allow drop
-  event.preventDefault();
-}, false);
-
-document.addEventListener("dragenter", function (event) {
-  // highlight potential drop target when the draggable element enters it
-  if (event.target.className == "dropzone") {
-    event.target.style.background = "purple";
-  }
-
-}, false);
-
-document.addEventListener("dragleave", function (event) {
-  // reset background of potential drop target when the draggable element leaves it
-  if (event.target.className == "dropzone") {
-    event.target.style.background = "";
-  }
-
-}, false);
-
-document.addEventListener("drop", function (event) {
-  // prevent default action (open as link for some elements)
-  event.preventDefault();
-  // move dragged elem to the selected drop target
-  if (event.target.className == "dropzone") {
-    event.target.style.background = "";
-    dragged.parentNode.removeChild(dragged);
-    event.target.appendChild(dragged);
-  }
-
-}, false);
+window.app = {
+    config: {
+        canDrag: false,
+        SliderTranslateY: 0,
+        cursorOffsetY: null
+    },
+    reset: function () {
+        this.config.cursorOffsetY = null;
+        SliderTranslateY = 0;
+    },
+    start: function () {
+        setupSliderPositionIndicator();
+        updateSliderPositionIndicator();
+        setupPageNumber();
+        document.getElementById('projects-slider').addEventListener('dragstart', function (event) {
+            // console.log('+++++++++++++ dragstart')
+            this.config.cursorOffsetY = event.offsetY;
+            this.adjustPostion(event);
+            var img = new Image();
+            img.style.visibility = "hidden";
+            event.dataTransfer.setDragImage(img, 10, 10);
+        }.bind(this));
+        document.getElementById('projects-slider').addEventListener('drag', function (event) {
+            // console.log('+++++++++++++ drag')
+            this.adjustPostion(event);
+          }.bind(this));
+        document.getElementById('projects-slider').addEventListener('dragend', function (event) {
+            // console.log('+++++++++++++ dragend')
+            oldSliderTranslateY = oldSliderTranslateY - SliderTranslateY;
+            // console.log(oldSliderTranslateY);
+            moveProjectSlider(oldSliderTranslateY);
+            this.reset();
+        }.bind(this));;
+    },
+    adjustPostion: function (event) {
+        if (event.pageX <= 0 || event.pageY <= 0) {
+            // console.log('skipped');
+            return;
+        }
+        var slider = document.getElementById('projects-slider');
+        slider.style.transition = "0s transform";
+        SliderTranslateY = pxTOvh(event.pageY - this.config.cursorOffsetY);
+        slider.style.transform = "translateY(" + SliderTranslateY + "vh)";
+    }
+};

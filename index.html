@@ -9,10 +9,9 @@
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
   <link rel="stylesheet" href="css/main.css">
   <script src="js/main.js"></script>
-  <script src="js/scrollEvent.js"></script>
+  <script src="js/dragger.js"></script>
 </head>
-<body>
-  <div></div>
+<body onload="window.app.start();">
   <div class="grid-slider-container">
     <div class="description-container">
       <h3>Title</h3>
@@ -23,34 +22,43 @@
         <div class="slider-btn" onclick="moveProjectSlider(1)"><i class="fa fa-angle-down"></i></div>
       </div>
     </div>
-    <div id="projects-slider">
-      <div class="flex-project-container">
-        <div>
-          <video autoplay muted style="width: 100%; display: inline-block;">
-            <source src="projects_container/devil_may_cry/resources/video/DMC4SE_Intro_Vergil_compressed.mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
-          </video>
+    <div class="dropzone" ondragover="dragover_handler(event);">
+      <div id="projects-slider" draggable="true">
+        <div class="flex-project-container">
+          <div>
+            <video autoplay muted style="width: 100%; display: inline-block;">
+              <source src="projects_container/devil_may_cry/resources/video/DMC4SE_Intro_Vergil_compressed.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
         </div>
-      </div>
-      <div class="flex-project-container">
-        <div>
-          <video autoplay muted style="width: 100%; display: inline-block;">
-            <source src="projects_container/devil_may_cry/resources/video/DMC4SE_Intro_Vergil_compressed.mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
-          </video>
+        <div class="flex-project-container">
+          <div>
+            <video autoplay muted style="width: 100%; display: inline-block;">
+              <source src="projects_container/devil_may_cry/resources/video/DMC4SE_Intro_Vergil_compressed.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
         </div>
-      </div>
-      <div class="flex-project-container">
-        <div>
-          <video autoplay muted style="width: 100%; display: inline-block;">
-            <source src="projects_container/devil_may_cry/resources/video/DMC4SE_Intro_Vergil_compressed.mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
-          </video>
+        <div class="flex-project-container">
+          <div>
+            <video autoplay muted style="width: 100%; display: inline-block;">
+              <source src="projects_container/devil_may_cry/resources/video/DMC4SE_Intro_Vergil_compressed.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
         </div>
       </div>
     </div>
-    <div></div>
+    <div class="flex-slide-pos-indicator">
+      <div id="slide-pos-indicator-container">
+        <div class="slide-pos-indicator" id="current-indicator"></div>
+      </div>
+    </div>
   </div>
-  <div></div>
+  <div id="page-num-container">
+    <p></p>
+    <p></p>
+  </div>
 </body>
 </html>
