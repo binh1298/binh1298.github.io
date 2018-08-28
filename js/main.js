@@ -5,15 +5,6 @@ function removeLoadingScreen(video)
   video.play();
 }
 
-function pauseIntro()
-{
-  console.log("pauseIntro");
-  var introVid = document.getElementById("introVid");
-  setTimeout(function(){
-    setTimeout(showLandingPage, 1000);
-    },
-    10000);
-}
 function showLandingPage()
 {
   if(disableIntroVid) return;
