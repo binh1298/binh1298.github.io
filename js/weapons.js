@@ -1,3 +1,38 @@
+// initializeVideoSrc();
+
+document.addEventListener('DOMContentLoaded', function() {
+  initializeVideoSrc();
+}, false);
+
+function initializeVideoSrc(){
+  var videoContainer = document.getElementById("dante-action-arm");
+  var armSrc = [
+    "resources/video/Dante/compressed_actions/dante_4.mp4",
+    "resources/video/Dante/compressed_actions/dante_7.mp4",
+    "resources/video/Dante/compressed_actions/dante_6.mp4"
+  ]
+  videoContainer.children[0].lastElementChild.firstElementChild.src = armSrc[0];
+  videoContainer.children[1].lastElementChild.firstElementChild.src = armSrc[1];
+  videoContainer.children[2].lastElementChild.firstElementChild.src = armSrc[2];
+  videoContainer.children[0].lastElementChild.load();
+  videoContainer.children[1].lastElementChild.load();
+  videoContainer.children[2].lastElementChild.load();
+  
+  videoContainer = document.getElementById("dante-action-gun");
+  var gunSrc = [
+    "resources/video/Dante/compressed_actions/dante_1.mp4",
+    "resources/video/Dante/compressed_actions/dante_2.mp4",
+    "resources/video/Dante/compressed_actions/dante_3.mp4"
+  ]
+  videoContainer.children[0].lastElementChild.firstElementChild.src = gunSrc[0];
+  videoContainer.children[1].lastElementChild.firstElementChild.src = gunSrc[1];
+  videoContainer.children[2].lastElementChild.firstElementChild.src = gunSrc[2];
+  videoContainer.children[0].lastElementChild.load();
+  videoContainer.children[1].lastElementChild.load();
+  videoContainer.children[2].lastElementChild.load();
+
+}
+
 var currentArtWorkPos = [0, 0];
 function switchArtWork(awf, awb){
   containerDanteAction1 = document.getElementById(awf);
