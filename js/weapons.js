@@ -1,3 +1,4 @@
+initializeVideoSrc();
 function initializeVideoSrc(){
   var videoContainer = document.getElementById("dante-action-arm");
   var armSrc = [

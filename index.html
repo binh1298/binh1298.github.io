@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed|Noto+Serif|Roboto+Condensed" rel="stylesheet">
+  <meta name="description" content="This is a tribute to my favorite video game: Devil May Cry">
+  <meta name="keywords" content="Devil May Cry, Video game, Personal Blog">
+  <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed|Noto+Serif|Roboto+Condensed"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/introduction.css">
   <link rel="stylesheet" href="css/dante.css">
@@ -15,8 +19,8 @@
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/responsive.css">
   <link rel="icon" href="resources/images/dante_icon.png">
-  <script src="js/main.js"></script>
   <title>Devil May Cry</title>
+  <script src="js/main.js"></script>
 </head>
 <body onload="">
   <div class="nav-bar">
@@ -31,31 +35,39 @@
     </ul>
   </div>
   <div class="bg-container">
-    <div class="father-half-container" onmouseover="changeHalfsSizes(this, event)" onmouseout="resetDefaultHalfsSizes()" id="halfs-container">
-      <div class="loading-screen">
-        <img src="resources/images/loading_screen.gif" alt="">
-      </div> 
-      <video id="introVid" autoplay muted onloadeddata="removeLoadingScreen(this)" onclick="showLandingPage();initializeVideoSrc();" onended="showLandingPage();initializeVideoSrc();">
+    <div class="father-half-container" onmouseover="changeHalfsSizes(this, event)" onmouseout="resetDefaultHalfsSizes()"
+      id="halfs-container">
+      <!-- <div class="loading-screen">
+        <img src="resources/images/loading_screen.gif" alt="Devil May Cry Image">
+      </div>  -->
+      <!-- <video id="introVid" autoplay muted onloadeddata="removeLoadingScreen(this)" onclick="showLandingPage();initializeVideoSrc();" onended="showLandingPage();initializeVideoSrc();">
         <source src="resources/video/DMC4SE_Intro_Vergil_compressed.mp4" type="video/mp4">
         Your browser does not support HTML5 video.
-      </video>
+      </video> -->
+      <div class="video-container">
+        <iframe id="introVid"
+          src="https://www.youtube-nocookie.com/embed/v-l3pjUbhhY?enablejsapi=1&autoplay=1&controls=0&loop=1&showinfo=0&playlist=v-l3pjUbhhY"
+          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+        <div class="video-overlay" onmousewheel="showLandingPage();" onclick="showLandingPage();"></div>
+      </div>
       <div id="dante-container">
         <div class="grid-half-container hc-left">
           <div>
-            <img src="resources/images/Dante_left.jpg" alt="">
+            <img src="resources/images/Dante_left.jpg" alt="Devil May Cry Image">
           </div>
           <div>
-            <img src="resources/images/Dante_right.jpg" alt="">
+            <img src="resources/images/Dante_right.jpg" alt="Devil May Cry Image">
           </div>
         </div>
       </div>
       <div id="nero-container">
         <div class="grid-half-container hc-right" id="nero-container-child">
           <div>
-            <img src="resources/images/Nero_left.jpg" alt="">
+            <img src="resources/images/Nero_left.jpg" alt="Devil May Cry Image">
           </div>
           <div>
-            <img src="resources/images/Nero_right.jpg" alt="">
+            <img src="resources/images/Nero_right.jpg" alt="Devil May Cry Image">
           </div>
         </div>
       </div>
@@ -64,63 +76,78 @@
 
   <div id="introduction-section">
     <div style="position: absolute; top: 2%; left: 50%; transform: translate(-50%, -50%); margin: 2% auto; width: 15vw">
-      <img src="resources/images/words/the_origin.png" alt="" style="display:block; margin: 0 auto; width: 100%">
-      <img src="resources/images/horizontal_bar.png" alt="" style="display:block; margin: 0 auto; width: 60%">
+      <img src="resources/images/words/the_origin.png" alt="Devil May Cry Image"
+        style="display:block; margin: 0 auto; width: 100%">
+      <img src="resources/images/horizontal_bar.png" alt="Devil May Cry Image"
+        style="display:block; margin: 0 auto; width: 60%">
     </div>
-    <img src="resources/images/introduction/Dante-vs-Nero-cropped_compressed.png" alt="" width="100%">
+    <img src="resources/images/introduction/Dante-vs-Nero-cropped_compressed.png" alt="Devil May Cry Image"
+      width="100%">
     <div class="description-box" id="intro-p-1">
-      <p>Devil May Cry® 4 immerses gamers in a gothic supernatural world, where a new protagonist clashes with a familiar hero. As the new leading man, Nero, players will unleash incredible attacks and non-stop combos using a unique new gameplay mechanic, his powerful "Devil Bringer" arm. </p>
+      <p>Devil May Cry® 4 immerses gamers in a gothic supernatural world, where a new protagonist clashes with a
+        familiar hero. As the new leading man, Nero, players will unleash incredible attacks and non-stop combos using a
+        unique new gameplay mechanic, his powerful "Devil Bringer" arm. </p>
     </div>
     <div class="description-box disapear-phone-screen" id="intro-p-2">
-      <p>With the advanced graphical capabilities of the PC, high definition visuals and intricate detail come to life as players explore new and exotic locales. Dynamic action and undeniable style combine with explosive fighting options and a gripping story to produce the incomparable experience that only a Devil May Cry game can deliver.</p>
+      <p>With the advanced graphical capabilities of the PC, high definition visuals and intricate detail come to life
+        as players explore new and exotic locales. Dynamic action and undeniable style combine with explosive fighting
+        options and a gripping story to produce the incomparable experience that only a Devil May Cry game can deliver.
+      </p>
     </div>
   </div>
   <div class="bg-full-red">
     <div class="section-container" id="grid-dante-section">
       <div class="model-container">
         <div class="model" id="dante-model-back">
-          <img src="resources/images/dante_section/D_devil_form.png" onclick="switchCharacterDante()" alt="">
+          <img src="resources/images/dante_section/D_devil_form.png" onclick="switchCharacterDante()"
+            alt="Devil May Cry Image">
         </div>
         <div class="model" id="dante-model-front">
-          <img src="resources/images/dante_section/D_human_form_compressed.png" onclick="switchCharacterDante()" alt="">
+          <img src="resources/images/dante_section/D_human_form_compressed.png" onclick="switchCharacterDante()"
+            alt="Devil May Cry Image">
         </div>
       </div>
       <div class="flex-carousel-container">
         <div>
           <div style="margin: 5% 0">
-            <img src="resources/images/words/son_of_sparda.png" alt="" class="carousel-title">
-            <img src="resources/images/horizontal_bar.png" alt="" class="carousel-title">
+            <img src="resources/images/words/son_of_sparda.png" alt="Devil May Cry Image" class="carousel-title">
+            <img src="resources/images/horizontal_bar.png" alt="Devil May Cry Image" class="carousel-title">
           </div>
           <div class="flex-box">
-            <img src="resources/images/Arrow_left.png" alt="" class="carousel-btn" onclick="changeCarouselDante(-1)">
+            <img src="resources/images/Arrow_left.png" alt="Devil May Cry Image" class="carousel-btn"
+              onclick="changeCarouselDante(-1)">
             <div class="carousel-video-container">
               <div class="carousel-grid" id="dante-video-carousel">
-                <img src="resources/images/devil_arms/art_work/ivory_ebony.jpg" alt="" id="">
-                <img src="resources/images/devil_arms/art_work/pandora.jpg" alt="" id="">
-                <img src="resources/images/devil_arms/art_work/rebellion.jpg" alt="" id="">
-                <img src="resources/images/devil_arms/art_work/gilgamesh.jpg" alt="" id="">
-                <img src="resources/images/devil_arms/art_work/lucifer.png" alt="" id="">
+                <img src="resources/images/devil_arms/art_work/ivory_ebony.jpg" alt="Devil May Cry Image" id="">
+                <img src="resources/images/devil_arms/art_work/pandora.jpg" alt="Devil May Cry Image" id="">
+                <img src="resources/images/devil_arms/art_work/rebellion.jpg" alt="Devil May Cry Image" id="">
+                <img src="resources/images/devil_arms/art_work/gilgamesh.jpg" alt="Devil May Cry Image" id="">
+                <img src="resources/images/devil_arms/art_work/lucifer.png" alt="Devil May Cry Image" id="">
               </div>
             </div>
-            <img src="resources/images/Arrow_right.png" alt="" class="carousel-btn" onclick="changeCarouselDante(1)">
+            <img src="resources/images/Arrow_right.png" alt="Devil May Cry Image" class="carousel-btn"
+              onclick="changeCarouselDante(1)">
           </div>
           <div class="description-box" id="dante-description">
-            <p>Dante is a paranormal mercenary, private investigator and vigilante Devil Hunter dedicated to exterminating evil demons and other malevolent supernatural forces</p>
+            <p>Dante is a paranormal mercenary, private investigator and vigilante Devil Hunter dedicated to
+              exterminating evil demons and other malevolent supernatural forces</p>
           </div>
         </div>
       </div>
     </div>
     <div id="dante-action-section">
       <div style="margin: 2% auto">
-        <img src="resources/images/words/dantes_action.png" alt="" style="display:block; margin: 0 auto; width: 25%">
-        <img src="resources/images/horizontal_bar.png" alt="" style="display:block; margin: 0 auto; width: 20%">
+        <img src="resources/images/words/dantes_action.png" alt="Devil May Cry Image"
+          style="display:block; margin: 0 auto; width: 25%">
+        <img src="resources/images/horizontal_bar.png" alt="Devil May Cry Image"
+          style="display:block; margin: 0 auto; width: 20%">
       </div>
       <div class="dante-action-cinema">
         <div class="dante-action-container" id="dante-action-arm">
           <div id="dante-action-arm-1">
             <div class="video-loading-screen">
-              <img src="resources/images/loading_screen.gif" alt="">
-            </div> 
+              <img src="resources/images/loading_screen.gif" alt="Devil May Cry Image">
+            </div>
             <video autoplay muted loop onloadeddata="removeLoadingScreen(this);">
               <source src="" type="video/mp4">
               Your browser does not support HTML5 video.
@@ -128,8 +155,8 @@
           </div>
           <div id="dante-action-arm-2">
             <div class="video-loading-screen">
-              <img src="resources/images/loading_screen.gif" alt="">
-            </div> 
+              <img src="resources/images/loading_screen.gif" alt="Devil May Cry Image">
+            </div>
             <video autoplay muted loop onloadeddata="removeLoadingScreen(this);">
               <source src="" type="video/mp4">
               Your browser does not support HTML5 video.
@@ -137,19 +164,19 @@
           </div>
           <div id="dante-action-arm-3">
             <div class="video-loading-screen">
-              <img src="resources/images/loading_screen.gif" alt="">
-            </div> 
+              <img src="resources/images/loading_screen.gif" alt="Devil May Cry Image">
+            </div>
             <video autoplay muted loop onloadeddata="removeLoadingScreen(this);">
               <source src="" type="video/mp4">
               Your browser does not support HTML5 video.
             </video>
           </div>
-        </div> 
+        </div>
         <div class="dante-action-container" id="dante-action-gun">
           <div id="dante-action-gun-1">
             <div class="video-loading-screen">
-              <img src="resources/images/loading_screen.gif" alt="">
-            </div> 
+              <img src="resources/images/loading_screen.gif" alt="Devil May Cry Image">
+            </div>
             <video autoplay muted loop onloadeddata="removeLoadingScreen(this);">
               <source src="" type="video/mp4">
               Your browser does not support HTML5 video.
@@ -157,8 +184,8 @@
           </div>
           <div id="dante-action-gun-2">
             <div class="video-loading-screen">
-              <img src="resources/images/loading_screen.gif" alt="">
-            </div> 
+              <img src="resources/images/loading_screen.gif" alt="Devil May Cry Image">
+            </div>
             <video autoplay muted loop onloadeddata="removeLoadingScreen(this);">
               <source src="" type="video/mp4">
               Your browser does not support HTML5 video.
@@ -166,27 +193,27 @@
           </div>
           <div id="dante-action-gun-3">
             <div class="video-loading-screen">
-              <img src="resources/images/loading_screen.gif" alt="">
-            </div> 
+              <img src="resources/images/loading_screen.gif" alt="Devil May Cry Image">
+            </div>
             <video autoplay muted loop onloadeddata="removeLoadingScreen(this);">
               <source src="" type="video/mp4">
               Your browser does not support HTML5 video.
             </video>
           </div>
-        </div> 
-        <img src="resources/images/loading_screen.gif" alt="" class="dante-action-video-decoy">
+        </div>
+        <img src="resources/images/loading_screen.gif" alt="Devil May Cry Image" class="dante-action-video-decoy">
       </div>
       <div class="hud-weapon-container" id="hud-gun-container" onclick="changeWeaponHudClockwise(this)">
-        <img src="resources/images/devil_arms/transparent/hud_ebony_ivory.png" alt="" id="gun-hud-1">
-        <img src="resources/images/devil_arms/transparent/hud_pandora.png" alt="" id="gun-hud-2">
-        <img src="resources/images/devil_arms/transparent/hud_shortgun.png" alt="" id="gun-hud-3">
-        <span style="opacity: 0;"></span> 
+        <img src="resources/images/devil_arms/transparent/hud_ebony_ivory.png" alt="Devil May Cry Image" id="gun-hud-1">
+        <img src="resources/images/devil_arms/transparent/hud_pandora.png" alt="Devil May Cry Image" id="gun-hud-2">
+        <img src="resources/images/devil_arms/transparent/hud_shortgun.png" alt="Devil May Cry Image" id="gun-hud-3">
+        <span style="opacity: 0;"></span>
         <!-- TODO: beautify the span -->
       </div>
       <div class="hud-weapon-container" id="hud-arm-container" onclick="changeWeaponHudCounterClockwise(this)">
-        <img src="resources/images/devil_arms/transparent/hud_rebellion.png" alt="" id="arm-hud-1">
-        <img src="resources/images/devil_arms/transparent/hud_gilgamesh.png" alt="" id="arm-hud-2">
-        <img src="resources/images/devil_arms/transparent/hud_lucifer.png" alt="" id="arm-hud-3">
+        <img src="resources/images/devil_arms/transparent/hud_rebellion.png" alt="Devil May Cry Image" id="arm-hud-1">
+        <img src="resources/images/devil_arms/transparent/hud_gilgamesh.png" alt="Devil May Cry Image" id="arm-hud-2">
+        <img src="resources/images/devil_arms/transparent/hud_lucifer.png" alt="Devil May Cry Image" id="arm-hud-3">
         <span style="opacity: 0;"></span>
       </div>
     </div>
@@ -196,49 +223,57 @@
       <div class="flex-carousel-container">
         <div>
           <div style="margin: 5% 0">
-            <img src="resources/images/words/neros_action.png" alt="" class="carousel-title">
-            <img src="resources/images/horizontal_bar.png" alt="" class="carousel-title">
+            <img src="resources/images/words/neros_action.png" alt="Devil May Cry Image" class="carousel-title">
+            <img src="resources/images/horizontal_bar.png" alt="Devil May Cry Image" class="carousel-title">
           </div>
           <div class="flex-box">
             <div class="carousel-video-container">
               <div class="carousel-grid" id="nero-video-carousel">
-                <img src="resources/images/nero_section/art_work_1.jpg" alt="" id="" width="100%">
-                <img src="resources/images/nero_section/2.jpg" alt="" id="" width="100%">
-                <img src="resources/images/nero_section/art_work_3.jpg" alt="" id="" width="100%">
-              </div> 
+                <img src="resources/images/nero_section/art_work_1.jpg" alt="Devil May Cry Image" id="" width="100%">
+                <img src="resources/images/nero_section/2.jpg" alt="Devil May Cry Image" id="" width="100%">
+                <img src="resources/images/nero_section/art_work_3.jpg" alt="Devil May Cry Image" id="" width="100%">
+              </div>
             </div>
           </div>
           <div class="description-box" id="dante-description">
-            <p>Nero is the son of Vergil who is raised in Fortuna and serves as a Holy Knight in a religious group that worships Sparda and fights to protect the world from demons.</p>
+            <p>Nero is the son of Vergil who is raised in Fortuna and serves as a Holy Knight in a religious group that
+              worships Sparda and fights to protect the world from demons.</p>
           </div>
         </div>
       </div>
       <div class="model-container">
         <div class="model" id="nero-model-back">
-          <img src="resources/images/nero_section/N_devil_form_compressed.png" onclick="switchCharacterNero()" alt="">
+          <img src="resources/images/nero_section/N_devil_form_compressed.png" onclick="switchCharacterNero()"
+            alt="Devil May Cry Image">
         </div>
         <div class="model" id="nero-model-front">
-          <img src="resources/images/nero_section/N_human_form.png" onclick="switchCharacterNero()" alt="">
+          <img src="resources/images/nero_section/N_human_form.png" onclick="switchCharacterNero()"
+            alt="Devil May Cry Image">
         </div>
       </div>
     </div>
     <div class="section-container" id="grid-others-section">
       <div class="description-box" id="others-description">
-        <p id="1">Vergil was the eldest of twin sons born of the demon Sparda and human Eva. Following the death of their mother as children, Vergil and Dante go their separate ways, with Vergil rejecting his humanity and embracing his demonic heritage, contrasting his younger brother's embrace of humanity.</p>
+        <p id="1">Vergil was the eldest of twin sons born of the demon Sparda and human Eva. Following the death of
+          their mother as children, Vergil and Dante go their separate ways, with Vergil rejecting his humanity and
+          embracing his demonic heritage, contrasting his younger brother's embrace of humanity.</p>
       </div>
       <div class="model-container tall-model">
         <div class="model">
-          <img src="resources/images/other_characters/mary_model_resized.png" id="marry-model" alt="" onclick="changeOthersDescription(0); scrollToDiv('grid-others-section')">
+          <img src="resources/images/other_characters/mary_model_resized.png" id="marry-model" alt="Devil May Cry Image"
+            onclick="changeOthersDescription(0); scrollToDiv('grid-others-section')">
         </div>
       </div>
       <div class="model-container tall-model">
         <div class="model">
-          <img src="resources/images/other_characters/vergil_model_resized.png" id="vergil-model" alt="" onclick="changeOthersDescription(1); scrollToDiv('grid-others-section')">
+          <img src="resources/images/other_characters/vergil_model_resized.png" id="vergil-model"
+            alt="Devil May Cry Image" onclick="changeOthersDescription(1); scrollToDiv('grid-others-section')">
         </div>
       </div>
       <div class="model-container tall-model">
         <div class="model">
-          <img src="resources/images/other_characters/trish_model.png" id="trish-model" alt="" onclick="changeOthersDescription(2); scrollToDiv('grid-others-section')">
+          <img src="resources/images/other_characters/trish_model.png" id="trish-model" alt="Devil May Cry Image"
+            onclick="changeOthersDescription(2); scrollToDiv('grid-others-section')">
         </div>
       </div>
     </div>
@@ -247,17 +282,19 @@
     <div id="grid-product-image-overlay">
       <div id="shop-form-container">
         <div style="position: absolute; top: 2%; right: 2%;" onclick="transformForm('translateX(-200%)')">
-          <img src="resources/images/Arrow_left.png" alt="" style="width: 3vw" class="carousel-btn">
+          <img src="resources/images/Arrow_left.png" alt="Devil May Cry Image" style="width: 3vw" class="carousel-btn">
         </div>
         <p class="form-label" style="visibility: hidden" id="form-messenger">*</p>
         <form autocomplete="off" id="customer-info-form">
           <p class="form-label">Your name:</p>
           <div class="form-text-field-container">
-            <input type="text" name="customerName" id="user_name" autocomplete="false" onfocus="showInputBorder(this)" onfocusout="hideInputBorder(this)">
+            <input type="text" name="customerName" id="user_name" autocomplete="false" onfocus="showInputBorder(this)"
+              onfocusout="hideInputBorder(this)">
           </div>
           <p class="form-label">Email:</p>
-          <div class="form-text-field-container">            
-            <input type="text" name="customerEmail" id="user_email" autocomplete="false" onfocus="showInputBorder(this)" onfocusout="hideInputBorder(this)">
+          <div class="form-text-field-container">
+            <input type="text" name="customerEmail" id="user_email" autocomplete="false" onfocus="showInputBorder(this)"
+              onfocusout="hideInputBorder(this)">
           </div>
           <!-- <p class="form-label">Phone number:</p>
           <div class="form-text-field-container">
@@ -267,16 +304,22 @@
             <p class="form-label">Total price: <span id="total-price"></span></p>
             <div class="grid-product-cart">
               <div id="dmc4-in-cart">
-                <div style="position: absolute; top: 2%; right: 2%;" onclick="removeProduct('dmc4'); updateVisualCart()">
-                  <img src="resources/images/Arrow_left.png" alt="" style="width: 3vw" class="carousel-btn">
+                <div style="position: absolute; top: 2%; right: 2%;"
+                  onclick="removeProduct('dmc4'); updateVisualCart()">
+                  <img src="resources/images/Arrow_left.png" alt="Devil May Cry Image" style="width: 3vw"
+                    class="carousel-btn">
                 </div>
-                <img src="resources/images/buy_this_game/dmc4.png" alt="" onmouseover="changeProductImage(0)">
+                <img src="resources/images/buy_this_game/dmc4.png" alt="Devil May Cry Image"
+                  onmouseover="changeProductImage(0)">
               </div>
               <div id="dmc3-in-cart">
-                <div style="position: absolute; top: 2%; right: 2%;" onclick="removeProduct('dmc3'); updateVisualCart()">
-                  <img src="resources/images/Arrow_left.png" alt="" style="width: 3vw" class="carousel-btn">
+                <div style="position: absolute; top: 2%; right: 2%;"
+                  onclick="removeProduct('dmc3'); updateVisualCart()">
+                  <img src="resources/images/Arrow_left.png" alt="Devil May Cry Image" style="width: 3vw"
+                    class="carousel-btn">
                 </div>
-                <img src="resources/images/buy_this_game/dmc3.jpg" alt="" onmouseover="changeProductImage(1)">
+                <img src="resources/images/buy_this_game/dmc3.jpg" alt="Devil May Cry Image"
+                  onmouseover="changeProductImage(1)">
               </div>
             </div>
           </div>
@@ -286,20 +329,22 @@
         </form>
       </div>
       <div class="product-big-container">
-        <div class="product-container" onmouseover="changeProductImage(0)" onclick="buyProduct('dmc4'); updateVisualCart(); scrollToDiv('shop-form-container')">
-          <img src="resources/images/buy_this_game/dmc4_compressed.jpg" alt="">
+        <div class="product-container" onmouseover="changeProductImage(0)"
+          onclick="buyProduct('dmc4'); updateVisualCart(); scrollToDiv('shop-form-container')">
+          <img src="resources/images/buy_this_game/dmc4_compressed.jpg" alt="Devil May Cry Image">
           <div class="add-to-cart-btn" id="dmc4">
             <p>BUY DEVIL MAY CRY 4</p>
           </div>
         </div>
-        <div class="product-container" onmouseover="changeProductImage(1)" onclick="buyProduct('dmc3'); updateVisualCart(); scrollToDiv('shop-form-container')" >
-          <img src="resources/images/buy_this_game/dmc3.jpg" alt="" style="margin-top: 10%">
+        <div class="product-container" onmouseover="changeProductImage(1)"
+          onclick="buyProduct('dmc3'); updateVisualCart(); scrollToDiv('shop-form-container')">
+          <img src="resources/images/buy_this_game/dmc3.jpg" alt="Devil May Cry Image" style="margin-top: 10%">
           <div class="add-to-cart-btn" id="dmc3">
             <p>BUY DEVIL MAY CRY 3</p>
           </div>
         </div>
       </div>
-    </div> 
+    </div>
   </div>
   <div class="footer-section">
     <div class="footer-text-container">
@@ -310,7 +355,28 @@
     </div>
   </div>
 </body>
+
 </html>
+<script type="text/javascript">
+  var tag = document.createElement('script');
+  tag.id = 'iframe-demo';
+  tag.src = 'https://www.youtube.com/iframe_api';
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  var player;
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('introVid', {
+      events: {
+        'onStateChange': onPlayerStateChange
+      }
+    });
+  }
+  function onPlayerStateChange(state) {
+    if (state.data == YT.PlayerState.ENDED) {
+      showLandingPage()
+    }
+  }
+</script>
 <script src="js/dante.js"></script>
 <script src="js/weapons.js"></script>
 <script src="js/nero.js"></script>
