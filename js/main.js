@@ -41,17 +41,23 @@ function scrollToDiv(id) {
   // });
 }
 
-function changeHalfsSizes(object, event) {
+var halfsHovered = false;
+
+function hoverHalfs() {
+  halfsHovered = !halfsHovered;
+}
+
+function changeHalfsSizes(mousePositionX) {
   if (screen.width <= 1024 || !disableIntroVid) return;
-  var currentMouseVerticalPos = event.clientX;
+  var currentMouseVerticalPos = mousePositionX;
   var totalWidth = screen.width;
   var danteContainer = document.getElementById("dante-container");
   var neroContainer = document.getElementById("nero-container");
   var neroContainerChild = document.getElementById("nero-container-child");
   var currentRatio = currentMouseVerticalPos / totalWidth;
   // console.log(currentRatio);
-  if (currentRatio < 0.2) currentRatio = 0;
-  if (currentRatio > 0.8) currentRatio = 1;
+  if (currentRatio < 0.1) currentRatio = 0;
+  if (currentRatio > 0.9) currentRatio = 1;
   if (currentRatio > 0.5) {
     neroContainerChild.style.right = "-" + (1 - (currentRatio - 0.5) * 2) * 50 + "vw";
     neroContainer.style.zIndex = 2;
@@ -68,9 +74,40 @@ function changeHalfsSizes(object, event) {
     neroContainer.style.opacity = currentRatio * 2;
   }
 }
+(function () {
+  document.onmousemove = handleMouseMove;
+
+  function handleMouseMove(event) {
+    if (!halfsHovered) return;
+    var eventDoc, doc, body;
+
+    event = event || window.event; // IE-ism
+
+    // If pageX/Y aren't available and clientX/Y are,
+    // calculate pageX/Y - logic taken from jQuery.
+    // (This is to support old IE)
+    if (event.pageX == null && event.clientX != null) {
+      eventDoc = (event.target && event.target.ownerDocument) || document;
+      doc = eventDoc.documentElement;
+      body = eventDoc.body;
+
+      event.pageX = event.clientX +
+        (doc && doc.scrollLeft || body && body.scrollLeft || 0) -
+        (doc && doc.clientLeft || body && body.clientLeft || 0);
+      event.pageY = event.clientY +
+        (doc && doc.scrollTop || body && body.scrollTop || 0) -
+        (doc && doc.clientTop || body && body.clientTop || 0);
+    }
+
+    // Use event.pageX / event.pageY here
+    // console.log(event.pageX, event.pageY);
+    changeHalfsSizes(event.pageX, event.pageY);
+  }
+})();
 
 function resetDefaultHalfsSizes() {
   if (screen.width <= 1024 || !disableIntroVid) return;
+  halfsHovered = false;
   var danteContainer = document.getElementById("dante-container");
   var neroContainer = document.getElementById("nero-container");
   var neroContainerChild = document.getElementById("nero-container-child");

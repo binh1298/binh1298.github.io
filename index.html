@@ -22,6 +22,7 @@
   <title>Devil May Cry</title>
   <script src="js/main.js"></script>
 </head>
+
 <body onload="">
   <div class="nav-bar">
     <ul>
@@ -35,7 +36,7 @@
     </ul>
   </div>
   <div class="bg-container">
-    <div class="father-half-container" onmouseover="changeHalfsSizes(this, event)" onmouseout="resetDefaultHalfsSizes()"
+    <div class="father-half-container" onmouseover="hoverHalfs()" onmouseout="resetDefaultHalfsSizes()"
       id="halfs-container">
       <!-- <div class="loading-screen">
         <img src="resources/images/loading_screen.gif" alt="Devil May Cry Image">
@@ -45,10 +46,11 @@
         Your browser does not support HTML5 video.
       </video> -->
       <div class="video-container">
-        <iframe id="introVid"
-          src="https://www.youtube-nocookie.com/embed/v-l3pjUbhhY?enablejsapi=1&autoplay=1&controls=0&loop=1&showinfo=0&playlist=v-l3pjUbhhY"
+        <!-- <iframe id="introVid"
+          src="https://www.youtube.com/embed/v-l3pjUbhhY?enablejsapi=1&muted=1&autoplay=1&controls=0&loop=1&showinfo=0&playlist=v-l3pjUbhhY"
           frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
+          allowfullscreen></iframe> -->
+        <div id="introVid"></div>
         <div class="video-overlay" onmousewheel="showLandingPage();" onclick="showLandingPage();"></div>
       </div>
       <div id="dante-container">
@@ -364,13 +366,28 @@
   var firstScriptTag = document.getElementsByTagName('script')[0];
   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
   var player;
+
   function onYouTubeIframeAPIReady() {
     player = new YT.Player('introVid', {
+      host: 'https://www.youtube.com',
+      videoId: 'v-l3pjUbhhY',
+      playerVars: {
+        'autoplay': 1,
+        'controls': 0,
+      },
       events: {
+        'onReady': onPlayerReady,
         'onStateChange': onPlayerStateChange
       }
     });
   }
+
+  function onPlayerReady(event) {
+    event.target.setPlaybackQuality("highres");
+    event.target.mute();
+    event.target.playVideo();
+  }
+
   function onPlayerStateChange(state) {
     if (state.data == YT.PlayerState.ENDED) {
       showLandingPage()
